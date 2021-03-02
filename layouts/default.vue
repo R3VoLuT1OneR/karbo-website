@@ -15,8 +15,8 @@ import Header from '~/components/layout/Header.vue'
 @Component({
   components: {
     Footer,
-    Header
-  }
+    Header,
+  },
 })
 export default class Layout extends Vue {
 }

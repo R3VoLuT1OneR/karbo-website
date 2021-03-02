@@ -1,9 +1,15 @@
 <template>
-  <div>
-    Social
-    <h2>Join the Karbo Community</h2>
-    <p>Join discussions to be aware of all the latest news.</p>
-  </div>
+  <article class="mt-40">
+    <span class="uppercase text-mono text-yellow text-sm font-bold tracking-widest">
+      Social
+    </span>
+    <h2 class="text-5xl font-extrabold">
+      Join the Karbo Community
+    </h2>
+    <p class="text-grey text-xl">
+      Join discussions to be aware of all the latest news.
+    </p>
+  </article>
 </template>
 
 <script lang="ts">
