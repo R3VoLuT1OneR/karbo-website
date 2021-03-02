@@ -17,18 +17,29 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/main',
   ],
 
   tailwindcss: {
     config: {
       theme: {
+        colors: {
+          white: '#FFFFFF',
+          yellow: '#EDA93A',
+          dark: '#123F60',
+          grey: '#6D7F93',
+          blue: '#0252E9',
+          'blue-light': '#1C69FA',
+        },
         fontFamily: {
           sans: ['Inter', 'sans-serif'],
+          mono: ['Roboto Mono', 'monospace'],
         },
       },
     },

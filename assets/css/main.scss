@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@layer base {
+  @import "button";
+
+  html, body {
+    @apply text-dark
+  }
+}
