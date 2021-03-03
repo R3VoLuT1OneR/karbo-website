@@ -25,6 +25,10 @@ export default {
   css: [
   ],
 
+  svgSprite: {
+    input: '~/assets/icons',
+  },
+
   tailwindcss: {
     cssPath: '~/assets/css/main.scss',
     config: {
@@ -66,6 +70,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://github.com/nuxt-community/svg-sprite-module
+    '@nuxtjs/svg-sprite',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

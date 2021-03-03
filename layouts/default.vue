@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:px-32">
+  <div>
     <Header />
     <Nuxt />
     <Footer />

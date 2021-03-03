@@ -1,10 +1,12 @@
+@import "variables";
+
 .button {
   $border-width: 2px;
 
   display: inline-flex;
   font-weight: 700;
 
-  height: 3em;
+  height: $button-height;
   padding: calc(.75em - #{$border-width}) 1em;
   line-height: 1em;
 

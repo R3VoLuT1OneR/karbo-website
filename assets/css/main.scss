@@ -4,6 +4,7 @@
 @tailwind screens;
 
 @layer base {
+  @import "variables";
   @import "button";
 
   html, body {

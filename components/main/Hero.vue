@@ -1,6 +1,6 @@
 <template>
-  <section class="flex justify-between pt-8 lg:ml-6">
-    <main class="flex flex-col justify-between pt-12">
+  <section class="hero flex items-stretch pt-8 lg:px-32 lg:pb-16">
+    <main class="flex flex-1 flex-col justify-between pt-12">
       <header>
         <h2 class="lg:text-6xl lg:font-extrabold lg:leading-none">
           Anonymous<br>
@@ -11,13 +11,15 @@
         </h3>
       </header>
       <footer class="flex flex-wrap justify-start">
-        <download-dropdown />
-        <button class="button border-blue-light">
-          Contribute on Github
-        </button>
+        <MainHeroDownloadDropdown />
+        <a href="https://github.com/Karbovanets/karbo" target="_blank" class="button border-blue-light px-6 ml-5">
+          <SvgIcon name="github" class="w-5 mr-1" />
+          <span>Contribute on Github</span>
+          <SvgIcon name="arrow-left" class="text-blue-light w-3 ml-2" />
+        </a>
       </footer>
     </main>
-    <aside class="flex justify-center align-middle">
+    <aside class="flex flex-1 justify-center align-middle">
       <img class="block" src="~/assets/images/hero.svg" alt="Karbo">
     </aside>
   </section>
@@ -25,16 +27,14 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import DownloadDropdown from '~/components/main/Hero/DownloadDropdown.vue'
 
-@Component({
-  components: {
-    DownloadDropdown,
-  },
-})
+@Component
 export default class Hero extends Vue {
 }
 </script>
 
 <style lang="scss" scoped>
+.hero {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);
+}
 </style>
