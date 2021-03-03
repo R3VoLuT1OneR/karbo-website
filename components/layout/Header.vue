@@ -46,6 +46,6 @@ export default class ComponentName extends Vue {
 
 <style lang="scss" scoped>
 header {
-  @apply flex
+  @apply flex;
 }
 </style>

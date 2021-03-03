@@ -10,4 +10,10 @@
   html, body {
     @apply text-dark
   }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

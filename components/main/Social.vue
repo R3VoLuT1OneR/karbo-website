@@ -62,7 +62,7 @@ export default class Social extends Vue {
 <style lang="scss" scoped>
 .socials {
   > a {
-    @apply block rounded-md border p-4 text-black opacity-50;
+    @apply block rounded-md border p-4 opacity-50;
     border-color: currentColor;
 
     &:hover {
