@@ -23,8 +23,8 @@ import Social from '~/components/main/Social.vue'
     About,
     Download,
     Usage,
-    Social
-  }
+    Social,
+  },
 })
 export default class index extends Vue {
 }

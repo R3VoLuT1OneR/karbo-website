@@ -21,11 +21,6 @@
           <SvgIcon :name="`wallets/${icon}`" class="w-6 h-6" />
         </a>
       </div>
-<!--      <div>-->
-<!--        <button class="button bg-blue-light hover:bg-blue text-white px-6">-->
-<!--          View All Wallets and Clients-->
-<!--        </button>-->
-<!--      </div>-->
     </main>
     <aside class="mr-64">
       <img src="~/assets/images/wallet.svg" alt="Karbo Wallet">

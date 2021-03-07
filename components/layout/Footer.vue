@@ -4,7 +4,9 @@
       <a href="/">
         <img class="lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" alt="Karbo">
       </a>
-      <p class="text-sm">© {{ currentYear }} Karbo</p>
+      <p class="text-sm">
+        © {{ currentYear }} Karbo
+      </p>
     </div>
     <nav class="flex flex-col">
       <span class="font-extrabold">Resources</span>
