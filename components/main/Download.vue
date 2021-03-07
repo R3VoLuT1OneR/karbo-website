@@ -44,6 +44,10 @@ export default class Download extends Vue {
         href: '',
       },
       {
+        icon: 'apple',
+        href: '',
+      },
+      {
         icon: 'android',
         href: '',
       },
