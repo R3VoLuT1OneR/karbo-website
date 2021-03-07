@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'karbo-website',
+    title: 'Karbo - Anonymous Exchange Medium',
     htmlAttrs: {
       lang: 'en',
     },
