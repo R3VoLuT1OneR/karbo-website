@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fkarbo-website\u002F_nuxt\u002Fstatic\u002F1615152133",layout:"default",error:a,serverRendered:true,routePath:"\u002F",config:{app:{basePath:"karbo-website\u002F",assetsPath:"karbo-website\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"3d7fb3fd"}}}}(null));
