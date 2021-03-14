@@ -1,7 +1,8 @@
 <template>
   <div
     v-if="loaded"
-    class="price-list flex relative"
+    v-click-outside="closeDropdown"
+    class="price-list flex items-center relative"
     :class="{ open: open }"
   >
     <header
@@ -10,10 +11,7 @@
     >
       <SvgIcon :name="trend(selected) ? 'trend-up' : 'trend-down'" class="w-5 h-5 mr-2" />
       <span class="font-semibold">{{ formattedPrice(selected) }}</span>
-      <SvgIcon
-        name="arrow-down"
-        class="arrow-down w-3 h-3 ml-1"
-      />
+      <SvgIcon name="arrow-down" class="arrow-down w-3 h-3 ml-1" />
     </header>
     <main class="absolute">
       <ul class="text-center">
@@ -34,6 +32,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
+import ClickOutside from 'vue-click-outside'
 
 const LS_KEY_SELECTED_CURRENCY = 'selectedCurrency'
 
@@ -87,7 +86,11 @@ const configs: Record<string, { sign: string, fraction?: number }> = {
   },
 }
 
-@Component
+@Component({
+  directives: {
+    ClickOutside,
+  },
+})
 export default class PriceList extends Vue {
   open: boolean = false
   loaded: boolean = false
@@ -116,6 +119,10 @@ export default class PriceList extends Vue {
         this.selected = savedCurrency
       }
     }
+  }
+
+  closeDropdown() {
+    this.open = false
   }
 
   trend(quote: keyof typeof configs): boolean {

@@ -53,6 +53,22 @@ export default {
     },
   },
 
+  i18n: {
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.ts' },
+      { code: 'uk', iso: 'uk-UA', name: 'Українська', file: 'uk-UA.ts' },
+      { code: 'ru', iso: 'ru-Ru', name: 'Русский', file: 'ru-RU.ts' },
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,
+    },
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -75,6 +91,8 @@ export default {
     '@nuxt/content',
     // https://github.com/nuxt-community/svg-sprite-module
     '@nuxtjs/svg-sprite',
+    // https://i18n.nuxtjs.org/
+    'nuxt-i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

@@ -13,39 +13,48 @@
         {{ label }}
       </a>
     </nav>
-    <PriceList
-      class="items-center"
-    />
+    <LanguageList />
+    <PriceList class="ml-4" />
   </header>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import PriceList from './Header/PriceList.vue'
+import LanguageList from './Header/LanguageList.vue'
 
 @Component({
   components: {
     PriceList,
+    LanguageList,
   },
 })
 export default class ComponentName extends Vue {
   get menu() {
     return [
       {
-        label: 'About',
-        href: '#about',
+        label: this.$t('About'),
+        href: this.localePath({
+          hash: '#about',
+        }),
       },
       {
-        label: 'Download',
-        href: '#download',
+        label: this.$t('Download'),
+        href: this.localePath({
+          hash: '#download',
+        }),
       },
       {
-        label: 'Usage',
-        href: '#usage',
+        label: this.$t('Usage'),
+        href: this.localePath({
+          hash: '#usage',
+        }),
       },
       {
-        label: 'Community',
-        href: '#community',
+        label: this.$t('Community'),
+        href: this.localePath({
+          hash: '#community',
+        }),
       },
     ]
   }
