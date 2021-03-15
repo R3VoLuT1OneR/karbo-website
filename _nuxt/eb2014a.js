@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{346:function(o,n,w){"use strict";w.r(n),n.default={About:"О Карбо",Download:"Скачать",Usage:"Успользование",Community:"Сообщество"}}}]);
