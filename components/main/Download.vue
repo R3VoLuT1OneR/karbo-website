@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-row-reverse justify-center mt-24 lg:px-32">
+  <article id="download" class="flex flex-row-reverse justify-center pt-24 lg:px-32">
     <main class="flex flex-col justify-center">
       <span class="uppercase text-mono text-yellow text-sm font-bold tracking-widest">
         Download

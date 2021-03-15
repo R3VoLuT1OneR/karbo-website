@@ -1,5 +1,5 @@
 <template>
-  <article class="mt-16 lg:px-32">
+  <article id="about" class="pt-16 lg:px-32">
     <header>
       <span class="uppercase text-mono text-yellow text-sm font-bold tracking-widest">
         About

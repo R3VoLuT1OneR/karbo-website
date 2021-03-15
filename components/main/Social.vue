@@ -1,5 +1,5 @@
 <template>
-  <article class="flex justify-center mt-24 lg:px-32">
+  <article id="social" class="flex justify-center pt-24 lg:px-32">
     <main>
       <span class="uppercase text-mono text-yellow text-sm font-bold tracking-widest">
         Social

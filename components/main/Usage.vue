@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col justify-center items-center mt-24 lg:px-32">
+  <article id="usage" class="flex flex-col justify-center items-center pt-24 lg:px-32">
     <header class="text-center max-w-xl">
       <span class="uppercase text-mono text-yellow text-sm font-bold tracking-widest">
         Usage

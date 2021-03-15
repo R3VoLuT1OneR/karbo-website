@@ -1,13 +1,13 @@
 <template>
   <div>
-    <a href="#download" class="dropdown">
+    <nuxt-link :to="localeRoute({ hash: '#download' })" class="dropdown">
       <button class="button bg-blue-light text-white px-10">
         <span>Download wallet</span>
       </button>
       <div class="arrow">
         <SvgIcon name="arrow-down" class="text-white opacity-50 w-3 h-3" />
       </div>
-    </a>
+    </nuxt-link>
     <p class="text-xs text-grey max-w-250px">
       By downloading and installing the wallet, you agree to the Terms
     </p>

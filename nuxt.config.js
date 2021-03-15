@@ -4,6 +4,18 @@ export default {
 
   router: {
     base: process.env.NUXT_ROUTER_BASE || '/',
+    scrollBehavior(to) {
+      if (to.hash) {
+        const el = document.querySelector(to.hash)
+        if (!el) {
+          return
+        }
+
+        return window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+      }
+
+      return window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -93,6 +105,8 @@ export default {
     '@nuxtjs/svg-sprite',
     // https://i18n.nuxtjs.org/
     'nuxt-i18n',
+    // https://www.npmjs.com/package/vue-scrollto
+    'vue-scrollto/nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

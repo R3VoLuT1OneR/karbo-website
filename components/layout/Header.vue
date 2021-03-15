@@ -4,14 +4,14 @@
       <img class="lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" alt="Karbo">
     </a>
     <nav class="flex flex-1 items-center">
-      <a
-        v-for="({ href, label }, i) in menu"
+      <nuxt-link
+        v-for="({ hash, label }, i) in menu"
         :key="i"
-        :href="href"
+        :to="localeRoute({ hash })"
         class="font-medium lg:px-5"
       >
         {{ label }}
-      </a>
+      </nuxt-link>
     </nav>
     <LanguageList />
     <PriceList class="ml-4" />
@@ -34,27 +34,19 @@ export default class ComponentName extends Vue {
     return [
       {
         label: this.$t('About'),
-        href: this.localePath({
-          hash: '#about',
-        }),
+        hash: '#about',
       },
       {
         label: this.$t('Download'),
-        href: this.localePath({
-          hash: '#download',
-        }),
+        hash: '#download',
       },
       {
         label: this.$t('Usage'),
-        href: this.localePath({
-          hash: '#usage',
-        }),
+        hash: '#usage',
       },
       {
         label: this.$t('Community'),
-        href: this.localePath({
-          hash: '#community',
-        }),
+        hash: '#social',
       },
     ]
   }

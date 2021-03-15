@@ -11,7 +11,7 @@
         </h3>
       </header>
       <footer class="flex flex-wrap justify-start">
-        <MainHeroDownloadDropdown />
+        <DownloadDropdown />
         <a href="https://github.com/Karbovanets/karbo" target="_blank" class="button border-blue-light px-6 ml-5">
           <SvgIcon name="github" class="w-5 mr-1" />
           <span>Contribute on Github</span>
@@ -27,8 +27,13 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
+import DownloadDropdown from '~/components/main/Hero/DownloadDropdown.vue'
 
-@Component
+@Component({
+  components: {
+    DownloadDropdown,
+  },
+})
 export default class Hero extends Vue {
 }
 </script>
