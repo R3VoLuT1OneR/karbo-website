@@ -33,7 +33,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap' },
     ],
   },
 
@@ -46,23 +46,7 @@ export default {
 
   tailwindcss: {
     cssPath: '~/assets/css/main.scss',
-    config: {
-      theme: {
-        colors: {
-          white: '#FFFFFF',
-          yellow: '#EDA93A',
-          dark: '#123F60',
-          black: '#1A2F61',
-          grey: '#6D7F93',
-          blue: '#0252E9',
-          'blue-light': '#1C69FA',
-        },
-        fontFamily: {
-          sans: ['Inter', 'sans-serif'],
-          mono: ['Roboto Mono', 'monospace'],
-        },
-      },
-    },
+    configPath: 'tailwind.config.js',
   },
 
   i18n: {
@@ -82,7 +66,9 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/tailwind.ts',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -93,6 +79,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://typed-vuex.roe.dev
+    'nuxt-typed-vuex',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

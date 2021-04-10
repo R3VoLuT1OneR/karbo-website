@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Header />
+  <div class="main-layout">
+    <Header class="fixed top-0 left-0 right-0" />
     <Nuxt />
     <Footer />
   </div>
@@ -22,5 +22,5 @@ export default class Layout extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

@@ -2,8 +2,8 @@
   <div
     v-if="loaded"
     v-click-outside="closeDropdown"
-    class="price-list flex items-center relative"
-    :class="{ open: open }"
+    class="price-list flex items-center relative font-mono"
+    :class="{ open }"
   >
     <header
       class="trigger flex items-center cursor-pointer"
@@ -11,17 +11,31 @@
     >
       <SvgIcon :name="trend(selected) ? 'trend-up' : 'trend-down'" class="w-5 h-5 mr-2" />
       <span class="font-semibold">{{ formattedPrice(selected) }}</span>
-      <SvgIcon name="arrow-down" class="arrow-down w-3 h-3 ml-1" />
+      <SvgIcon name="arrow-down" class="arrow-down w-3 h-3 ml-2" />
     </header>
-    <main class="absolute">
-      <ul class="text-center">
+    <MobileModal v-if="$accessor.tailwind.viewSize === 'sm'" :open="open" @close="open = false">
+      <ul class="font-semibold text-lg my-4">
         <li
           v-for="(quote, i) in dropdownList"
           :key="i"
-          class="cursor-pointer my-1"
+          class="cursor-pointer py-2"
           @click="select(quote)"
         >
           <span class="font-medium">
+            {{ formattedPrice(quote) }}
+          </span>
+        </li>
+      </ul>
+    </MobileModal>
+    <main v-else class="absolute rounded border-2 border-grey-light">
+      <ul>
+        <li
+          v-for="(quote, i) in dropdownList"
+          :key="i"
+          class="cursor-pointer px-4 py-1 text-xs font-medium hover:text-blue-dark"
+          @click="select(quote)"
+        >
+          <span>
             {{ formattedPrice(quote) }}
           </span>
         </li>
@@ -33,6 +47,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import ClickOutside from 'vue-click-outside'
+import MobileModal from '~/components/MobileModal.vue'
 
 const LS_KEY_SELECTED_CURRENCY = 'selectedCurrency'
 
@@ -87,6 +102,7 @@ const configs: Record<string, { sign: string, fraction?: number }> = {
 }
 
 @Component({
+  components: { MobileModal },
   directives: {
     ClickOutside,
   },
@@ -133,7 +149,7 @@ export default class PriceList extends Vue {
     const { sign, fraction } = configs[quote]
     const price = this.quotes[quote]?.price
 
-    return `${sign} ${Number(price).toFixed(fraction || 2)}`
+    return `${sign}${Number(price).toFixed(fraction || 2)}`
   }
 
   select(quote: keyof typeof configs) {
@@ -149,22 +165,19 @@ export default class PriceList extends Vue {
   .trigger {
     .arrow-down {
       transition: transform .3s ease-in-out;
-      @apply text-grey;
     }
   }
 
   > main {
     @apply bg-white;
     display: none;
-    top: calc(100%);
-    left: -1rem;
-    right: -1rem;
+    top: calc(100% + 1rem);
+    left: 0;
   }
 
   &.open {
     .trigger {
       .arrow-down {
-        @apply text-blue;
         transform: rotate(180deg);
       }
     }
