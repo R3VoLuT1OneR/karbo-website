@@ -1,27 +1,37 @@
 <template>
-  <section class="hero flex items-stretch pt-8 lg:px-32 lg:pb-16">
-    <main class="flex flex-1 flex-col justify-between pt-12">
-      <header>
-        <h2 class="lg:text-6xl lg:font-extrabold lg:leading-none">
-          Anonymous<br>
-          Exchange Medium
-        </h2>
-        <h3 class="text-grey font-mono lg:text-3xl">
-          based on CryptoNote blockchain tech.
-        </h3>
+  <section class="hero">
+    <main class="py-12 md:py-16 md:container md:pl-12 lg:pl-20 xl:pl-32 md:pr-8 lg:pr-16 xl:pr-40">
+      <header class="flex justify-between">
+        <section>
+          <h2 class="text-5xl font-extrabold">
+            <span class="text-blue-dark">Anonymous</span><br>
+            Exchange Medium
+          </h2>
+          <h3 class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4">
+            based on CryptoNote <span class="font-normal italic">blockchain</span> tech.
+          </h3>
+        </section>
+        <aside class="flex items-center">
+          <img
+            class="hidden md:block w-full"
+            src="~/assets/images/hero2.svg"
+            alt="Karbo"
+          >
+        </aside>
       </header>
-      <footer class="flex flex-wrap justify-start">
+      <footer class="md:mt-6 lg:mt-0 xl:-mt-20 md:flex">
         <DownloadDropdown />
-        <a href="https://github.com/Karbovanets/karbo" target="_blank" class="button border-blue-light px-6 ml-5">
-          <SvgIcon name="github" class="w-5 mr-1" />
-          <span>Contribute on Github</span>
-          <SvgIcon name="arrow-left" class="text-blue-light w-3 ml-2" />
+        <a
+          :href="githubLink"
+          target="_blank"
+          class="flex items-center font-mono font-medium hover:no-underline sm:mt-6 md:mt-0 md:ml-8 h-12"
+        >
+          <SvgIcon name="github" class="h-8 w-8" />
+          <span class="ml-3 mr-2">Contribute on Github</span>
+          <SvgIcon name="arrow-right" class="h-4 w-4" />
         </a>
       </footer>
     </main>
-    <aside class="flex flex-1 justify-center align-middle">
-      <img class="block" src="~/assets/images/hero.svg" alt="Karbo">
-    </aside>
   </section>
 </template>
 
@@ -35,11 +45,70 @@ import DownloadDropdown from '~/components/main/Hero/DownloadDropdown.vue'
   },
 })
 export default class Hero extends Vue {
+  get githubLink() {
+    return 'https://github.com/Karbovanets/karbo'
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .hero {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FC 100%);
+
+  > main {
+    > header {
+      > section {
+        > h2 {
+          font-size: 2.875rem;
+          line-height: 3.625rem;
+        }
+        > h3 {
+          font-size: 1.5rem;
+          line-height: 2.25rem;
+        }
+      }
+    }
+
+    @media (max-width: theme('screens.md')) {
+      padding-left: 6.25vw;
+      padding-right: 6.25vw;
+    }
+
+    @screen md {
+      > header {
+        > section {
+          > h2 {
+            font-size: 3.5rem;
+            line-height: 4rem;
+          }
+          > h3 {
+            font-size: 1.75rem;
+            line-height: 2.625rem;
+          }
+        }
+        > aside {
+          min-width: 320px;
+        }
+      }
+    }
+
+    @screen lg {
+      > header {
+        > section {
+          > h2 {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+          }
+          > h3 {
+            font-size: 1.875rem;
+            line-height: 2.75rem;
+          }
+        }
+        > aside {
+          min-width: 410px;
+        }
+      }
+    }
+  }
 }
 </style>

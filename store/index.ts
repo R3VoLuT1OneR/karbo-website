@@ -1,5 +1,6 @@
 import { getAccessorType } from 'typed-vuex'
 import * as tailwind from './tailwind'
+import * as wallets from './wallets'
 
 export const state = () => ({
 })
@@ -22,5 +23,6 @@ export const accessorType = getAccessorType({
   state,
   modules: {
     tailwind,
+    wallets,
   },
 })

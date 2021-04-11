@@ -1,26 +1,58 @@
 <template>
-  <footer class="flex justify-between lg:mt-32 lg:px-24 py-8">
-    <div class="flex flex-col justify-between">
-      <a href="/">
-        <img class="lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" alt="Karbo">
-      </a>
-      <p class="text-sm">
-        © {{ currentYear }} Karbo
-      </p>
-    </div>
-    <nav class="flex flex-col">
-      <span class="font-extrabold">Resources</span>
-      <a class="mt-2" href="#info">Info</a>
-      <a class="mt-2" href="#usage">Usage</a>
-      <a class="mt-2" href="#download">Download</a>
-      <a class="mt-2" href="#explorer">Explorer</a>
+  <footer class="px-8 py-12 bg-blue-airy">
+<!--    <div class="flex flex-col justify-between">-->
+<!--      <a href="/">-->
+<!--        <img class="lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" alt="Karbo">-->
+<!--      </a>-->
+<!--      <p class="text-sm">-->
+<!--        © {{ currentYear }} Karbo-->
+<!--      </p>-->
+<!--    </div>-->
+    <nav class="flex flex-col mb-3">
+      <span class="text-xl font-extrabold">Resources</span>
+      <template v-for="({ hash, href, label }, i) in resources">
+        <nuxt-link
+          v-if="hash"
+          :key="i"
+          :to="localeRoute({ hash })"
+          class="text-lg mt-3"
+        >
+          {{ label }}
+        </nuxt-link>
+        <a
+          v-else-if="href"
+          :key="i"
+          :href="href"
+          target="_blank"
+          class="text-lg mt-3"
+        >
+          {{ label }}
+        </a>
+      </template>
     </nav>
-    <nav class="flex flex-col">
-      <span class="font-extrabold">Legal</span>
-      <a class="mt-2" href="#terms">Terms and conditions</a>
-      <a class="mt-2" href="#privacy">Privacy Policy</a>
+    <nav class="flex flex-col mb-3 mt-12">
+      <span class="text-xl font-extrabold">Legal</span>
+      <template v-for="({ hash, href, label }, i) in legal">
+        <nuxt-link
+          v-if="hash"
+          :key="i"
+          :to="localeRoute({ hash })"
+          class="text-lg mt-3"
+        >
+          {{ label }}
+        </nuxt-link>
+        <a
+          v-else-if="href"
+          :key="i"
+          :href="href"
+          target="_blank"
+          class="text-lg mt-3"
+        >
+          {{ label }}
+        </a>
+      </template>
     </nav>
-    <div class="flex">
+    <div class="flex mt-12">
       <a
         v-for="({ icon, href }, i) in socials"
         :key="i"
@@ -30,6 +62,9 @@
       >
         <SvgIcon :name="icon" class="w-4 h-4" />
       </a>
+    </div>
+    <div class="mt-12 text-lg">
+      © {{ (new Date()).getFullYear() }} Karbo
     </div>
   </footer>
 </template>
@@ -64,6 +99,36 @@ export default class Footer extends Vue {
       {
         icon: 'social/facebook',
         href: '',
+      },
+    ]
+  }
+
+  get resources() {
+    return [
+      {
+        label: this.$t('Usage'),
+        hash: '#usage',
+      },
+      {
+        label: this.$t('Download'),
+        hash: '#download',
+      },
+      {
+        label: this.$t('Explorer'),
+        href: 'https://explorer.karbo.io',
+      },
+    ]
+  }
+
+  get legal() {
+    return [
+      {
+        label: this.$t('Terms and Conditions'),
+        hash: '#terms',
+      },
+      {
+        label: this.$t('Privacy Policy'),
+        hash: '#policy',
       },
     ]
   }

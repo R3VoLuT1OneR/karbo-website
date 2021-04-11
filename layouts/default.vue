@@ -1,7 +1,7 @@
 <template>
   <div class="main-layout">
-    <Header class="fixed top-0 left-0 right-0" />
-    <Nuxt />
+    <Header class="fixed top-0 left-0 right-0 sm:h-12 md:h-20" />
+    <Nuxt class="sm:mt-12 md:mt-20" />
     <Footer />
   </div>
 </template>

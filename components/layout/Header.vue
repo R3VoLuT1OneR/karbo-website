@@ -11,8 +11,7 @@
           v-for="({ hash, label }, i) in menu"
           :key="i"
           :to="localeRoute({ hash })"
-          class="font-sm md:px-3 lg:px-4 xl:px-5"
-          @click.native="mobileMenu = false"
+          class="text-xs lg:text-sm md:px-3 lg:px-4 xl:px-5"
         >
           {{ label }}
         </nuxt-link>
