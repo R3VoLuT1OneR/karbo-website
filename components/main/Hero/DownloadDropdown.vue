@@ -10,14 +10,14 @@
         class="button rounded border-r bg-blue-mid text-white hover:no-underline"
         @mouseover.native="open = true"
       >
-        <span>Download wallet</span>
+        <span>{{ $t('hero.downloadButton.title') }}</span>
         <span class="arrow rounded-r">
           <SvgIcon name="arrow-down" class="text-white w-3 h-3" />
         </span>
       </nuxt-link>
       <p class="text-xs mt-2 max-w-256px">
         <!-- TODO: Link to terms and conditions? -->
-        By downloading and installing the wallet, you agree to the <span class="font-semibold">Terms</span>
+        {{ $t('hero.downloadButton.disclaimer.preLine') }}<span class="font-semibold">{{ $t('hero.downloadButton.disclaimer.linkTitle') }}</span>
       </p>
     </header>
     <main v-if="open" class="pt-2">
@@ -35,7 +35,9 @@
         class="flex items-center border-t border-grey-light hover:no-underline text-sm py-4 px-4 mt-2"
       >
         <SvgIcon name="arrow-right" class="w-4 h-4 mr-2 -rotate-90" />
-        <span>{{ $t('All wallets and clients')}}</span>
+        <span>
+          {{ $t('hero.downloadButton.wallets.all') }}
+        </span>
       </nuxt-link>
     </main>
   </div>

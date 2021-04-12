@@ -2,9 +2,9 @@
   <header class="w-full bg-white z-10" :class="{ 'has-shadow': hasShadow }">
     <div class="flex items-center w-full md:justify-between md:container md:py-6 xl:px-24 lg:px-12 md:px-6 bg-white">
       <a href="/" class="sm:flex-grow ml-5 z-20 md:ml-0">
-        <span class="sr-only">Karbo</span>
-        <img class="hidden md:block lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" alt="Karbo">
-        <img class="py-2 sm:block md:hidden" src="~/assets/images/logo_small.svg" width="35" height="35" alt="Karbo">
+        <span class="sr-only">{{ $t('karbo') }}</span>
+        <img class="hidden md:block lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" :alt="$t('karbo')">
+        <img class="py-2 sm:block md:hidden" src="~/assets/images/logo_small.svg" width="35" height="35" :alt="$t('karbo')">
       </a>
       <nav class="hidden md:flex flex-grow md:items-center">
         <nuxt-link
@@ -62,19 +62,19 @@ export default class ComponentName extends Vue {
   get menu() {
     return [
       {
-        label: this.$t('About'),
+        label: this.$t('menu.about'),
         hash: '#about',
       },
       {
-        label: this.$t('Download'),
+        label: this.$t('menu.download'),
         hash: '#download',
       },
       {
-        label: this.$t('Usage'),
+        label: this.$t('menu.usage'),
         hash: '#usage',
       },
       {
-        label: this.$t('Community'),
+        label: this.$t('menu.community'),
         hash: '#social',
       },
     ]

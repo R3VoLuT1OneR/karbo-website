@@ -4,12 +4,13 @@
       <header class="flex justify-between">
         <section>
           <h2 class="text-5xl font-extrabold">
-            <span class="text-blue-dark">Anonymous</span><br>
-            Exchange Medium
+            <span class="text-blue-dark">{{ $t('hero.title.line1') }}</span><br>
+            {{ $t('hero.title.line2') }}
           </h2>
-          <h3 class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4">
-            based on CryptoNote <span class="font-normal italic">blockchain</span> tech.
-          </h3>
+          <h3
+            class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4"
+            v-html="$t('hero.subtitle')"
+          />
         </section>
         <aside class="flex items-center">
           <img
@@ -27,7 +28,7 @@
           class="flex items-center font-mono font-medium hover:no-underline sm:mt-6 md:mt-0 md:ml-8 h-12"
         >
           <SvgIcon name="github" class="h-8 w-8" />
-          <span class="ml-3 mr-2">Contribute on Github</span>
+          <span class="ml-3 mr-2">{{ $t('hero.githubContribution') }}</span>
           <SvgIcon name="arrow-right" class="h-4 w-4" />
         </a>
       </footer>

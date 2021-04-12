@@ -1,9 +1,42 @@
 /* eslint-disable */
 export default {
-  "About": "About",
-  "Download": "Download",
-  "Usage": "Usage",
-  "Community": "Community",
+  karbo: 'Karbo',
+
+  menu: {
+    about: 'About',
+    download: 'Download',
+    usage: 'Usage',
+    community: 'Community',
+  },
+
+  hero: {
+    title: {
+      line1: 'Anonymous',
+      line2: 'Exchange Medium',
+    },
+    subtitle: 'based on CryptoNote <span class="font-normal italic">blockchain</span> tech.',
+    githubContribution: 'Contribute on Github',
+
+    downloadButton: {
+      title: 'Download wallet',
+      disclaimer: {
+        preLine: 'By downloading and installing the wallet, you agree to the ',
+        linkTitle: 'Terms',
+      },
+      wallets: {
+        all: 'All wallets and clients'
+      },
+    }
+  },
+
+  wallets: {
+    windows: 'Wallet for Windows',
+    linux: 'Wallet for Linux',
+    macos: 'Wallet for Mac OS X',
+    android: 'Wallet for Android',
+    web: 'Web Wallet',
+    paper: 'Paper Wallet',
+  },
 
   about: {
     label: 'About',
