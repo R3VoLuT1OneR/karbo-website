@@ -52,6 +52,8 @@ export default class Hero extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import "assets/css/mixins";
+
 .hero {
   background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FC 100%);
 
@@ -69,10 +71,7 @@ export default class Hero extends Vue {
       }
     }
 
-    @media (max-width: theme('screens.md')) {
-      padding-left: 6.25vw;
-      padding-right: 6.25vw;
-    }
+    @include mobile-padding();
 
     @screen md {
       > header {

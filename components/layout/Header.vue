@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full bg-white" :class="{ 'has-shadow': hasShadow }">
+  <header class="w-full bg-white z-10" :class="{ 'has-shadow': hasShadow }">
     <div class="flex items-center w-full md:justify-between md:container md:py-6 xl:px-24 lg:px-12 md:px-6 bg-white">
       <a href="/" class="sm:flex-grow ml-5 z-20 md:ml-0">
         <span class="sr-only">Karbo</span>

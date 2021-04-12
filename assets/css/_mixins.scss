@@ -1,0 +1,6 @@
+@mixin mobile-padding() {
+  @media (max-width: theme('screens.md')) {
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
+  }
+}
