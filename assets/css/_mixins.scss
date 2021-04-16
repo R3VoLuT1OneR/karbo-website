@@ -1,6 +1,23 @@
+@import "variables";
+
 @mixin mobile-padding() {
   @media (max-width: theme('screens.md')) {
-    padding-left: 6.25vw;
-    padding-right: 6.25vw;
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}
+
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-grey-light;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-blue-mid;
   }
 }

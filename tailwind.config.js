@@ -25,6 +25,8 @@ module.exports = {
       'navy-dark': '#0F3A8A',
       orange: '#EDA93A',
       'orange-light': '#FEDDA7',
+      greenish: '#48A49D',
+      green: '#60B061',
       white: '#FFFFFF',
     },
     fontFamily: {

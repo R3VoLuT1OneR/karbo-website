@@ -46,6 +46,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import ClickOutside from 'vue-click-outside'
+import { WalletVersion, WalletType } from '~/store/wallets'
 
 @Component({
   directives: {
@@ -56,11 +57,47 @@ export default class DownloadDropdown extends Vue {
   open: boolean = false
 
   async fetch() {
-    await this.$store.dispatch('wallets/fetch')
+    await this.$store.dispatch('wallets/fetchWalletDetails', {
+      version: WalletVersion.Karbo,
+      type: WalletType.Spring,
+    })
   }
 
   get wallets() {
-    return this.$accessor.wallets.wallets
+    const wallet = this.$accessor.wallets.karbo[WalletType.Spring].details!
+
+    return [
+      {
+        icon: 'windows',
+        label: this.$i18n.t('wallets.windows'),
+        href: wallet.windows.href,
+      },
+      {
+        icon: 'linux',
+        label: this.$i18n.t('wallets.linux'),
+        href: wallet.ubuntu.href,
+      },
+      {
+        icon: 'apple',
+        label: this.$i18n.t('wallets.macos'),
+        href: wallet.macos.href,
+      },
+      {
+        icon: 'android',
+        href: this.$accessor.wallets.mobile.android,
+        label: this.$i18n.t('wallets.android'),
+      },
+      {
+        label: this.$i18n.t('wallets.web'),
+        icon: 'web',
+        href: this.$accessor.wallets.web,
+      },
+      // {
+      //   label: this.$i18n.t('wallets.paper'),
+      //   icon: 'paper',
+      //   href: 'https://wallet.karbo.org/',
+      // },
+    ]
   }
 }
 </script>

@@ -7,10 +7,11 @@
             <span class="text-blue-dark">{{ $t('hero.title.line1') }}</span><br>
             {{ $t('hero.title.line2') }}
           </h2>
-          <h3
-            class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4"
-            v-html="$t('hero.subtitle')"
-          />
+          <h3 class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4">
+            {{ $t('hero.subtitle.pre') }}
+            <span class="font-normal italic">{{ $t('hero.subtitle.blockchain') }}</span>
+            {{ $t('hero.subtitle.suff') }}
+          </h3>
         </section>
         <aside class="flex items-center">
           <img

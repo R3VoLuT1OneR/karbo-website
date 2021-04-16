@@ -10,10 +10,4 @@
   html, body {
     @apply text-denim-dark
   }
-
-  a {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }

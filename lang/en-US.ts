@@ -14,7 +14,11 @@ export default {
       line1: 'Anonymous',
       line2: 'Exchange Medium',
     },
-    subtitle: 'based on CryptoNote <span class="font-normal italic">blockchain</span> tech.',
+    subtitle: {
+      pre: 'based on CryptoNote ',
+      blockchain: 'blockchain',
+      suff: ' tech.',
+    },
     githubContribution: 'Contribute on Github',
 
     downloadButton: {
@@ -67,5 +71,47 @@ export default {
       label: 'All Coins are Equal',
       content: 'Fungibility means all coins have equal value and are interchangeable because it is impossible to trace their history.',
     },
-  }
+  },
+
+  download: {
+    karboWallet: 'Karbo Wallet',
+    label: 'Download',
+    title: 'Choose Your Wallet',
+
+    tabs: {
+      windows: 'Windows',
+      macos: 'macOS',
+      linux: 'Linux',
+      mobile: 'Mobile',
+      web: 'Web',
+      paper: 'Paper',
+    },
+
+    wallets: {
+      cli: {
+        title: 'Command Line Suite',
+        description: 'Command line tools for services. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      },
+      classic: {
+        title: 'QT Wallet Classic',
+        description: 'Native Karbo wallet. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      },
+      spring: {
+        title: 'QT Spring Wallet',
+        description: 'Alternative Karbo wallet. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      },
+      lite: {
+        title: 'Lite Wallet',
+        description: 'Doesn’t store the blockchain on disc. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      },
+      android: {
+        title: 'Android Wallet',
+        description: 'Android . Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      },
+      web: {
+        title: 'Web Wallet',
+        description: 'Web Wallet . Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      },
+    }
+  },
 }
