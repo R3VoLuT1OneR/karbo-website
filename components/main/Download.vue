@@ -74,7 +74,7 @@
                 <a
                   v-if="download"
                   :href="download"
-                  class="button rounded-full bg-blue-mid text-white font-semibold px-6 mt-4 hover:bg-blue-dark md:text-sm"
+                  class="button rounded-full bg-blue-mid text-white font-semibold px-6 mt-4 hover:bg-blue-dark md:text-xs"
                 >
                   <SvgIcon name="download" class="mr-2 w-4 h-4" />
                   <span>Download</span>
@@ -83,7 +83,7 @@
                   v-if="link"
                   :href="link"
                   target="_blank"
-                  class="button rounded-full bg-blue-mid text-white font-semibold px-6 mt-4 hover:bg-blue-dark md:text-sm"
+                  class="button rounded-full bg-blue-mid text-white font-semibold px-6 mt-4 hover:bg-blue-dark md:text-xs"
                 >
                   <span>Open</span>
                   <SvgIcon name="external" class="ml-2 w-4 h-4" />
@@ -91,7 +91,7 @@
                 <a
                   v-if="source"
                   :href="source"
-                  class="button rounded-full font-mono font-medium text-sm mt-4"
+                  class="button rounded-full font-mono font-medium text-xs mt-4"
                   target="_blank"
                 >
                   <SvgIcon name="github" class="mr-2 w-6 h-6 text-denim-dark" />

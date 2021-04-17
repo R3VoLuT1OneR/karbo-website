@@ -114,4 +114,10 @@ export default {
       },
     }
   },
+
+  usage: {
+    label: 'Usage',
+    title: 'Partners and Ecosystem',
+    description: 'Here you can find places where to buy, exchange or spend Karbo.',
+  }
 }
