@@ -1,13 +1,11 @@
 declare module 'platform-detect' {
-  export default interface PlatformDetect {
-    windows: boolean
-    macos: boolean
-    linux: boolean
-    linuxBased: boolean
+  export const windows: boolean
+  export const macos: boolean
+  export const linux: boolean
+  export const linuxBased: boolean
 
-    android: boolean
-    ios: boolean
-    phone: boolean
-    tablet: boolean
-  }
+  export const android: boolean
+  export const ios: boolean
+  export const phone: boolean
+  export const tablet: boolean
 }

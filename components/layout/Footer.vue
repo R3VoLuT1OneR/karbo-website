@@ -1,13 +1,5 @@
 <template>
   <footer class="px-8 py-12 bg-blue-airy">
-<!--    <div class="flex flex-col justify-between">-->
-<!--      <a href="/">-->
-<!--        <img class="lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" alt="Karbo">-->
-<!--      </a>-->
-<!--      <p class="text-sm">-->
-<!--        © {{ currentYear }} Karbo-->
-<!--      </p>-->
-<!--    </div>-->
     <nav class="flex flex-col mb-3">
       <span class="text-xl font-extrabold">Resources</span>
       <template v-for="({ hash, href, label }, i) in resources">

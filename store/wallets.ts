@@ -95,6 +95,10 @@ export const state = (): StoreState => ({
 })
 
 export const mutations: MutationTree<StoreState> = {
+  setWalletVersion(state, { version, data }) {
+    Vue.set(state, version, data)
+  },
+
   setWalletDetails(state, { version, type, details }: {
     version: WalletVersion,
     type: WalletType,
@@ -110,6 +114,52 @@ export const mutations: MutationTree<StoreState> = {
     loading: Promise<WalletDetails>,
   }) {
     Vue.set(state[version][type], 'loading', loading)
+  },
+}
+
+export const actions: ActionTree<StoreState, RootState> = {
+  async fetchWalletDetails({ commit, state }, { version, type }: { version: WalletVersion, type: WalletType }) {
+    const curr = state[version][type]
+
+    if (curr.details) {
+      return curr.details
+    }
+
+    if (curr.loading) {
+      return await curr.loading
+    }
+
+    const { owner, repo, os: oses } = githubDetails[version][type]
+    const loading = octokit.repos.listReleases({ owner, repo })
+      .then((rsp): WalletDetails => {
+        const version = rsp.data[0].tag_name
+        return rsp.data[0].assets.reduce((acc, asset) => {
+          for (const [os, regexp] of Object.entries(oses)) {
+            if (regexp && regexp.test(asset.name)) {
+              return { ...acc, [os]: { href: asset.browser_download_url, version, os } }
+            }
+          }
+
+          return acc
+        }, {} as WalletDetails)
+      })
+
+    commit('setWalletLoading', { version, type, loading })
+    commit('setWalletDetails', { version, type, details: await loading })
+  },
+
+  async fetchAll({ dispatch }) {
+    return await Promise.all([
+      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.CLI }),
+      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.Classic }),
+      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.Spring }),
+      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.Lite }),
+
+      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.CLI }),
+      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.Classic }),
+      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.Spring }),
+      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.Lite }),
+    ])
   },
 }
 
@@ -189,51 +239,5 @@ const githubDetails = {
         [WalletOS.Ubuntu]: /^KarboLite-ubuntu20.04/,
       },
     },
-  },
-}
-
-export const actions: ActionTree<StoreState, RootState> = {
-  async fetchWalletDetails({ commit, state }, { version, type }: { version: WalletVersion, type: WalletType }) {
-    const curr = state[version][type]
-
-    if (curr.details) {
-      return curr.details
-    }
-
-    if (curr.loading) {
-      return await curr.loading
-    }
-
-    const { owner, repo, os: oses } = githubDetails[version][type]
-    const loading = octokit.repos.listReleases({ owner, repo })
-      .then((rsp): WalletDetails => {
-        const version = rsp.data[0].tag_name
-        return rsp.data[0].assets.reduce((acc, asset) => {
-          for (const [os, regexp] of Object.entries(oses)) {
-            if (regexp && regexp.test(asset.name)) {
-              return { ...acc, [os]: { href: asset.browser_download_url, version, os } }
-            }
-          }
-
-          return acc
-        }, {} as WalletDetails)
-      })
-
-    commit('setWalletLoading', { version, type, loading })
-    commit('setWalletDetails', { version, type, details: await loading })
-  },
-
-  async fetchAll({ dispatch }) {
-    return await Promise.all([
-      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.CLI }),
-      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.Classic }),
-      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.Spring }),
-      // dispatch('fetchWalletDetails', { version: WalletVersion.Karbowanec, type: WalletType.Lite }),
-
-      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.CLI }),
-      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.Classic }),
-      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.Spring }),
-      dispatch('fetchWalletDetails', { version: WalletVersion.Karbo, type: WalletType.Lite }),
-    ])
   },
 }

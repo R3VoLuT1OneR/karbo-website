@@ -3,8 +3,8 @@
     <Hero />
     <About />
     <Download />
-<!--    <Usage />-->
-<!--    <Social />-->
+    <!-- <Usage /> -->
+    <!-- <Social /> -->
   </main>
 </template>
 

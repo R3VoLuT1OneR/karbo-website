@@ -29,7 +29,8 @@
       "@nuxt/content",
       "@types/node",
       "@octokit/types",
-      "nuxt-i18n"
+      "nuxt-i18n",
+      "vue-scrollto"
     ]
   },
   "exclude": [
