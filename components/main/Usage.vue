@@ -45,7 +45,7 @@
               :aria-label="title"
               target="_blank"
               rel="noopener"
-              class="py-4 px-5 last:mb-4 hover-scale"
+              class="py-6 px-5 last:mb-4 hover-scale"
             >
               <SvgIcon :name="icon" class="w-16 h-16" />
               <main>

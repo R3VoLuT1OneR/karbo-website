@@ -23,7 +23,7 @@
           >
         </aside>
       </header>
-      <footer class="md:mt-6 lg:mt-0 xl:-mt-20 md:flex">
+      <footer class="mt-6 lg:mt-0 xl:-mt-20 md:flex">
         <DownloadDropdown />
         <a
           :href="githubLink"
