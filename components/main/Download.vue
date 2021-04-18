@@ -160,22 +160,6 @@ export default class Download extends Vue {
 
   active: NoDesktop | WalletOS = WalletOS.Windows
 
-  mounted() {
-    this.setActiveTab(detectDefaultTab())
-
-    const resizeHandler = () => {
-      this.updateGroupDisplay(this.active)
-    }
-
-    window.addEventListener('resize', resizeHandler)
-
-    this.$once('unmounted', () => window.removeEventListener('resize', resizeHandler))
-  }
-
-  async fetch() {
-    await this.$store.dispatch('wallets/fetchAll')
-  }
-
   get karbo() {
     return this.$accessor.wallets.karbo
   }
@@ -300,6 +284,22 @@ export default class Download extends Vue {
       //   label: this.$t('download.tabs.paper'),
       // },
     }
+  }
+
+  async fetch() {
+    await this.$store.dispatch('wallets/fetchAll')
+  }
+
+  mounted() {
+    this.setActiveTab(detectDefaultTab())
+
+    const resizeHandler = () => {
+      this.updateGroupDisplay(this.active)
+    }
+
+    window.addEventListener('resize', resizeHandler)
+
+    this.$once('unmounted', () => window.removeEventListener('resize', resizeHandler))
   }
 
   setActiveTab(tab: WalletOS | NoDesktop) {

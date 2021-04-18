@@ -27,6 +27,9 @@ import Social from '~/components/main/Social.vue'
   },
 })
 export default class index extends Vue {
+  async fetch() {
+    await this.$store.dispatch('wallets/fetchAll')
+  }
 }
 </script>
 
