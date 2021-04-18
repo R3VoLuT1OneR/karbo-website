@@ -7,7 +7,7 @@
     <header>
       <nuxt-link
         :to="localeRoute({ hash: '#download'})"
-        class="button rounded border-r bg-blue-mid text-white hover:no-underline font-semibold"
+        class="button rounded border-r bg-blue-dark text-white hover:no-underline font-semibold"
         @mouseover.native="open = true"
       >
         <span>{{ $t('hero.downloadButton.title') }}</span>
@@ -120,7 +120,7 @@ export default class DownloadDropdown extends Vue {
         padding-right: 2.5em;
       }
       .arrow {
-        @apply flex items-center justify-center bg-blue-dark;
+        @apply flex items-center justify-center bg-blue-darkest;
         width: $button-height;
         height: $button-height;
         ::v-deep .icon {
@@ -160,7 +160,7 @@ export default class DownloadDropdown extends Vue {
   &.open {
     > header {
       > .button {
-        @apply bg-blue-dark;
+        @apply bg-blue-darkest;
 
         > .arrow {
           ::v-deep .icon {

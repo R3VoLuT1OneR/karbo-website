@@ -22,11 +22,12 @@ module.exports = {
       'blue-icon': '#90B5FB',
       'blue-mid': '#4585FB',
       'blue-dark': '#1A63E9',
+      'blue-darkest': '#0B52D2',
       'navy-dark': '#0F3A8A',
       orange: '#EDA93A',
       'orange-light': '#FEDDA7',
       greenish: '#48A49D',
-      green: '#60B061',
+      green: '#307331',
       white: '#FFFFFF',
     },
     fontFamily: {

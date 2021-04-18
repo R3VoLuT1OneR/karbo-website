@@ -25,12 +25,11 @@ import Social from '~/components/main/Social.vue'
     Usage,
     Social,
   },
+  asyncData ({ store }): Promise<object | void> | object | void {
+    return store.dispatch('wallets/fetchAll')
+  },
 })
-export default class index extends Vue {
-  async fetch() {
-    await this.$store.dispatch('wallets/fetchAll')
-  }
-}
+export default class index extends Vue {}
 </script>
 
 <style scoped>

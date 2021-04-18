@@ -1,5 +1,5 @@
 <template>
-  <article id="download" class="download md:flex items-start md:container py-12 md:px-12 lg:px-16 xl:px-32">
+  <article id="download" class="download md:flex items-start md:container py-12 md:pb-32 md:px-12 lg:px-16 xl:px-32">
     <aside class="hidden lg:flex justify-center w-5/12 pr-12 lg:pt-16 xl:w-6/12">
       <img
         width="230"
@@ -76,7 +76,7 @@
                 <a
                   v-if="download"
                   :href="download"
-                  class="button rounded-full bg-blue-mid text-white font-semibold px-6 mt-4 hover:bg-blue-dark md:text-xs"
+                  class="button rounded-full bg-blue-dark text-white font-semibold px-6 mt-4 hover:bg-blue-darkest md:text-xs"
                 >
                   <SvgIcon name="download" class="mr-2 w-4 h-4" />
                   <span>Download</span>
@@ -86,10 +86,10 @@
                   :href="link"
                   rel="noopener"
                   target="_blank"
-                  class="button rounded-full bg-blue-mid text-white font-semibold px-6 mt-4 hover:bg-blue-dark md:text-xs"
+                  class="button rounded-full bg-blue-dark text-white font-semibold px-6 mt-4 hover:bg-blue-darkest md:text-xs"
                 >
                   <span>Open</span>
-                  <SvgIcon name="external" class="ml-2 w-4 h-4" />
+                  <SvgIcon name="external" class="ml-2 w-4 h-4 md:w-3 md:h-3" />
                 </a>
                 <a
                   v-if="source"
@@ -374,8 +374,7 @@ export default class Download extends Vue {
 
           &:hover {
             > figure {
-              @apply border border-blue;
-              transform: scale(1.1);
+              transform: scale(1.2);
             }
           }
         }

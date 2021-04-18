@@ -1,7 +1,7 @@
 <template>
   <article
     id="social"
-    class="social flex flex-col justify-center md:container md:pt-12 md:flex-row pb-12 md:px-12 lg:px-16 xl:px-32"
+    class="social flex flex-col justify-center md:container pb-12 md:pb-32 md:pt-16 md:flex-row md:px-12 lg:px-16 xl:px-32"
   >
     <aside class="py-12 lg:w-1/2 md:flex md:justify-center md:mr-12">
       <img width="333" height="150" src="~/assets/images/social.svg" :alt="$t('social.label')">
