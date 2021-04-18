@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{383:function(o,n,w){"use strict";w.r(n),n.default={About:"О Карбо",Download:"Скачать",Usage:"Успользование",Community:"Сообщество"}}}]);
-//# sourceMappingURL=067081a.js.map
