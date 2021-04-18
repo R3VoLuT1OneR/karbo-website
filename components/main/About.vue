@@ -1,5 +1,5 @@
 <template>
-  <article id="about" class="about md:container py-12 md:pt-20 md:px-12 lg:px-16 xl:px-32">
+  <article id="about" class="about md:container py-12 md:pb-24 md:pt-20 md:px-12 lg:px-16 xl:px-32">
     <header>
       <span class="uppercase font-mono text-orange text-sm font-bold tracking-widest">
         {{ $t('about.label') }}

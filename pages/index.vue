@@ -25,8 +25,8 @@ import Social from '~/components/main/Social.vue'
     Usage,
     Social,
   },
-  asyncData ({ store }): Promise<object | void> | object | void {
-    return store.dispatch('wallets/fetchAll')
+  async fetch({ store }) {
+    await store.dispatch('wallets/load')
   },
 })
 export default class index extends Vue {}

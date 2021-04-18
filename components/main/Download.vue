@@ -37,7 +37,7 @@
             </figure>
             <span>{{ label }}</span>
           </li>
-          <li v-if="$accessor.tailwind.viewSize === 'sm'">
+          <li class="md:hidden">
             <span class="block w-1" />
           </li>
         </ul>
@@ -50,10 +50,7 @@
             <article
               v-for="({ tag, type, download, link, source, icon }, wi) in group"
               :key="wi"
-              class="wallet px-6 py-5 rounded-lg bg-blue-airy"
-              :class="{
-                'mb-8': wi !== group.length - 1
-              }"
+              class="wallet px-6 py-5 rounded-lg bg-blue-airy mt-8"
             >
               <span
                 class="tag py-2 px-3 bg-navy-dark uppercase text-white font-mono font-bold text-sm tracking-widest"
@@ -290,10 +287,6 @@ export default class Download extends Vue {
     }
   }
 
-  async fetch() {
-    await this.$store.dispatch('wallets/fetchAll')
-  }
-
   mounted() {
     this.setActiveTab(detectDefaultTab())
 
@@ -328,8 +321,10 @@ export default class Download extends Vue {
     const active = Object.values(this.tabs).indexOf(this.tabs[tab])
     const children: HTMLElement[] = Array.from(this.walletsElement.children) as HTMLElement[]
 
-    // this.groups.style.height = `${children.reduce((acc, curr) => Math.max(acc, curr.offsetHeight), 0)}px`
-    this.walletsElement.style.height = `${children[active].offsetHeight}px`
+    // Timeout set because render height is wrong in the beginnings
+    setTimeout(() => {
+      this.walletsElement.style.height = `${children[active].offsetHeight}px`
+    }, 100)
 
     children.forEach((group, i) => {
       group.style.left = `${this.walletsElement.offsetWidth * (i - active)}px`

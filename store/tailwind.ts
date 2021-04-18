@@ -13,7 +13,7 @@ export interface StoreState {
 }
 
 export const state = () => ({
-  viewSize: ViewSizes.MD,
+  viewSize: ViewSizes.SM,
 })
 
 export const getters: GetterTree<StoreState, RootState> = {

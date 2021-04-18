@@ -46,7 +46,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import ClickOutside from 'vue-click-outside'
-import { WalletVersion, WalletType } from '~/store/wallets'
+import { WalletType } from '~/store/wallets'
 
 @Component({
   directives: {
@@ -55,13 +55,6 @@ import { WalletVersion, WalletType } from '~/store/wallets'
 })
 export default class DownloadDropdown extends Vue {
   open: boolean = false
-
-  async fetch() {
-    await this.$store.dispatch('wallets/fetchWalletDetails', {
-      version: WalletVersion.Karbo,
-      type: WalletType.Spring,
-    })
-  }
 
   get wallets() {
     const wallet = this.$accessor.wallets.karbo[WalletType.Spring].details!

@@ -1,6 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  // mode: "spa",
 
   router: {
     base: process.env.NUXT_ROUTER_BASE || '/',
@@ -95,6 +96,8 @@ export default {
     'nuxt-i18n',
     // https://www.npmjs.com/package/vue-scrollto
     'vue-scrollto/nuxt',
+    // Module load last release details into ./data dir before build.
+    '~/modules/githubReleases',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
