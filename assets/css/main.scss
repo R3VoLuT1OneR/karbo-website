@@ -10,4 +10,20 @@
   html, body {
     @apply text-denim-dark
   }
+
+  .hover-scale {
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .hover-scale-1 {
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

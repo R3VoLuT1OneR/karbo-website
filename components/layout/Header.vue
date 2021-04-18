@@ -1,10 +1,10 @@
 <template>
   <header class="w-full bg-white z-10" :class="{ 'has-shadow': hasShadow }">
     <div class="flex items-center w-full md:justify-between md:container md:py-6 xl:px-24 lg:px-12 md:px-6 bg-white">
-      <a href="/" class="sm:flex-grow ml-5 z-20 md:ml-0">
+      <a href="/" class="flex-grow ml-5 z-20 md:ml-0">
         <span class="sr-only">{{ $t('karbo') }}</span>
         <img class="hidden md:block lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" :alt="$t('karbo')">
-        <img class="py-2 sm:block md:hidden" src="~/assets/images/logo_small.svg" width="35" height="35" :alt="$t('karbo')">
+        <img class="py-2 block md:hidden" src="~/assets/images/logo_small.svg" width="35" height="35" :alt="$t('karbo')">
       </a>
       <nav class="hidden md:flex flex-grow md:items-center">
         <nuxt-link
@@ -18,26 +18,28 @@
       </nav>
       <LanguageList class="hidden md:block" />
       <PriceList class="mr-4 md:ml-4 md:mr-0" />
-      <SvgIcon name="menu" class="w-6 h-6 mr-3 text-blue-mid cursor-pointer md:hidden" @click="mobileMenu = true" />
-      <no-ssr>
-        <MobileModal
-          :open="mobileMenu && $accessor.tailwind.viewSize === 'sm'"
-          @close="mobileMenu = false"
-        >
-          <nav class="flex flex-col my-4">
-            <nuxt-link
-              v-for="({ hash, label }, i) in menu"
-              :key="i"
-              :to="localeRoute({ hash })"
-              class="font-sm py-2 text-lg"
-              @click.native="mobileMenu = false"
-            >
-              {{ label }}
-            </nuxt-link>
-          </nav>
-          <LanguageList @selected="mobileMenu = false" />
-        </MobileModal>
-      </no-ssr>
+      <SvgIcon
+        name="menu"
+        class="w-6 h-6 mr-3 text-blue-mid cursor-pointer md:hidden"
+        @click.native="mobileMenu = true"
+      />
+      <MobileModal
+        :open="mobileMenu && $accessor.tailwind.viewSize === 'sm'"
+        @close="mobileMenu = false"
+      >
+        <nav class="flex flex-col my-4">
+          <nuxt-link
+            v-for="({ hash, label }, i) in menu"
+            :key="i"
+            :to="localeRoute({ hash })"
+            class="font-sm py-2 text-lg"
+            @click.native="mobileMenu = false"
+          >
+            {{ label }}
+          </nuxt-link>
+        </nav>
+        <LanguageList @selected="mobileMenu = false" />
+      </MobileModal>
     </div>
   </header>
 </template>

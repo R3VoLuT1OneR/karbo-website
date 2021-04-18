@@ -27,7 +27,7 @@
           </li>
         </ul>
         -->
-        <section ref="groups" class="mt-12 overflow-hidden relative p-2">
+        <section ref="groups" class="mt-12 overflow-hidden relative -m-2 p-2">
           <!--
           <div
             v-for="({ list }, i) in listGroups"
@@ -36,14 +36,14 @@
           >
           -->
           <div
-            class="usage-group grid gap-6 w-full md:grid-cols-2 lg:grid-cols-3 list-reset"
+            class="usage-group grid gap-6 w-full md:grid-cols-2 lg:grid-cols-3"
           >
             <a
               v-for="({ title, subtitle, icon, href }, j) in listGroups[0].list"
               :key="j"
               :href="href"
               target="_blank"
-              class="py-4 px-5 last:mb-4"
+              class="py-4 px-5 last:mb-4 hover-scale"
             >
               <SvgIcon :name="icon" class="w-16 h-16" />
               <main>

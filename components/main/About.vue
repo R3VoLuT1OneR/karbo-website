@@ -11,7 +11,7 @@
         {{ $t('about.description') }}
       </p>
     </header>
-    <main class="grid grid-cols-1 gap-y-12 py-8 md:grid-cols-2 md:gap-x-12 md:py-12 lg:grid-cols-3">
+    <main class="grid grid-cols-1 gap-y-12 py-8 md:grid-cols-2 md:gap-x-12 md:mt-12 lg:grid-cols-3">
       <section
         v-for="({ label, content, icon }, i) in sections"
         :key="i"

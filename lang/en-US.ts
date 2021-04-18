@@ -9,6 +9,24 @@ export default {
     community: 'Community',
   },
 
+  footer: {
+    resources: {
+      label: 'Resources',
+      list: {
+        usage: 'Usage',
+        download: 'Download',
+        explorer: 'Explorer',
+      }
+    },
+    legal: {
+      label: 'Legal',
+      list: {
+        terms: 'Terms and conditions',
+        privacy: 'Privacy Policy',
+      }
+    }
+  },
+
   hero: {
     title: {
       line1: 'Anonymous',
@@ -119,5 +137,11 @@ export default {
     label: 'Usage',
     title: 'Partners and Ecosystem',
     description: 'Here you can find places where to buy, exchange or spend Karbo.',
+  },
+
+  social: {
+    label: 'SOCIAL',
+    title: 'Join the Karbo Community',
+    description: 'Join discussions to be aware of all the latest news.',
   }
 }

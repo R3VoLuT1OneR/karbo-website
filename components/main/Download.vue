@@ -17,7 +17,7 @@
         </h2>
       </header>
       <main>
-        <ul ref="tabs" class="flex mt-6 mb-8 overflow-x-auto">
+        <ul ref="tabs" class="flex pt-6 pb-8 overflow-x-auto">
           <li
             v-for="({ icon, label }, tab) in tabs"
             :key="tab"
@@ -350,13 +350,13 @@ export default class Download extends Vue {
 
           > figure {
             @apply bg-blue-light;
-            transition: background-color .15s ease-in;
+            transition: all .15s ease-in;
+
             > .icon {
               @apply text-blue-icon;
             }
           }
 
-          &:hover,
           &.active {
             @apply text-denim-dark;
 
@@ -365,6 +365,13 @@ export default class Download extends Vue {
               > .icon {
                 @apply text-white;
               }
+            }
+          }
+
+          &:hover {
+            > figure {
+              @apply border border-blue;
+              transform: scale(1.1);
             }
           }
         }
