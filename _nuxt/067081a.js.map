@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./lang/ru-RU.ts"],"names":[],"mappings":"0FAAA,OACe,WACb,MAAS,UACT,SAAY,UACZ,MAAS,gBACT,UAAa","file":"067081a.js","sourcesContent":["/* eslint-disable */\nexport default {\n  \"About\": \"О Карбо\",\n  \"Download\": \"Скачать\",\n  \"Usage\": \"Успользование\",\n  \"Community\": \"Сообщество\",\n}\n"],"sourceRoot":""}
