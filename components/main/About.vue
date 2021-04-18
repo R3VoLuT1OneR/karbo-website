@@ -18,7 +18,7 @@
       >
         <SvgIcon :name="icon" class="w-12 h-12 mb-5 md:mb-8 xl:w-16 xl:h-16" />
         <span class="text-xl font-semibold">{{ label }}</span>
-        <p class="text-grey">
+        <p class="text-grey-mid">
           {{ content }}
         </p>
       </section>

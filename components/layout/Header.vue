@@ -18,11 +18,9 @@
       </nav>
       <LanguageList class="hidden md:block" />
       <PriceList class="mr-4 md:ml-4 md:mr-0" />
-      <SvgIcon
-        name="menu"
-        class="w-6 h-6 mr-3 text-blue-mid cursor-pointer md:hidden"
-        @click.native="mobileMenu = true"
-      />
+      <div class="md:hidden cursor-pointer" @click="mobileMenu = true">
+        <SvgIcon name="menu" class="w-6 h-6 mr-3 text-blue-mid" />
+      </div>
       <MobileModal
         :open="mobileMenu && $accessor.tailwind.viewSize === 'sm'"
         @close="mobileMenu = false"

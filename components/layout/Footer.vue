@@ -23,6 +23,7 @@
               v-else-if="href"
               :key="i"
               :href="href"
+              rel="noopener"
               target="_blank"
               class="text-lg mt-3 md:text-sm"
             >
@@ -47,6 +48,7 @@
               v-else-if="href"
               :key="i"
               :href="href"
+              rel="noopener"
               target="_blank"
               class="text-lg mt-3 md:text-sm"
             >
@@ -58,10 +60,13 @@
       <section class="md:flex md:flex-row-reverse justify-between">
         <div class="flex mt-12">
           <a
-            v-for="({ icon, href }, i) in socials"
+            v-for="({ icon, href, label }, i) in socials"
             :key="i"
             :href="href"
+            :aria-label="label"
             :class="{ 'mr-5': socials.length - 1 !== i }"
+            target="_blank"
+            rel="noopener"
             class="text-grey hover:text-denim-dark hover-scale w-4 h-4 md:w-5 md:h-5"
           >
             <SvgIcon :name="icon" class="w-full h-full" />
@@ -83,22 +88,27 @@ export default class Footer extends Vue {
   get socials() {
     return [
       {
+        label: 'Karbo Telegram',
         icon: 'social/telegram',
         href: 'https://t.me/karbowanec/',
       },
       {
+        label: 'Karbo Redit',
         icon: 'social/redit',
         href: 'https://www.reddit.com/r/krb/',
       },
       {
+        label: 'Karbo Twitter',
         icon: 'social/twitter',
         href: 'https://twitter.com/krbcoin',
       },
       {
+        label: 'Karbo Facebook',
         icon: 'social/facebook',
         href: 'https://www.facebook.com/karbo.io',
       },
       {
+        label: 'Karbo Github',
         icon: 'social/github',
         href: 'https://github.com/Karbovanets/',
       },

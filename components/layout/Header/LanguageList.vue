@@ -13,7 +13,7 @@
       </span>
       <SvgIcon name="arrow-down" class="arrow-down w-3 h-3 ml-1" />
     </header>
-    <main class="absolute md:border-2 md:border-grey-light md:rounded">
+    <main class="absolute md:border md:border-grey-light md:rounded">
       <ul>
         <li
           v-for="({ code, name }) in $i18n.locales"

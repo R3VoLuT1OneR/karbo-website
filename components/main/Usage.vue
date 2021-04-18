@@ -42,12 +42,14 @@
               v-for="({ title, subtitle, icon, href }, j) in listGroups[0].list"
               :key="j"
               :href="href"
+              :aria-label="title"
               target="_blank"
+              rel="noopener"
               class="py-4 px-5 last:mb-4 hover-scale"
             >
               <SvgIcon :name="icon" class="w-16 h-16" />
               <main>
-                <h4 class="text-2xl font-extrabold mt-2">{{ title }}</h4>
+                <h3 class="text-2xl font-extrabold mt-2">{{ title }}</h3>
                 <p class="text-grey-dark">{{ subtitle }}</p>
               </main>
             </a>

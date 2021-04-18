@@ -7,7 +7,7 @@
     <header>
       <nuxt-link
         :to="localeRoute({ hash: '#download'})"
-        class="button rounded border-r bg-blue-mid text-white hover:no-underline"
+        class="button rounded border-r bg-blue-mid text-white hover:no-underline font-semibold"
         @mouseover.native="open = true"
       >
         <span>{{ $t('hero.downloadButton.title') }}</span>

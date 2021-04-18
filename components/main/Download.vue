@@ -2,6 +2,8 @@
   <article id="download" class="download md:flex items-start md:container py-12 md:px-12 lg:px-16 xl:px-32">
     <aside class="hidden lg:flex justify-center w-5/12 pr-12 lg:pt-16 xl:w-6/12">
       <img
+        width="230"
+        height="265"
         src="~/assets/images/wallets.svg"
         :alt="$t('download.karboWallet')"
         class="w-full xl:w-2/3"
@@ -63,10 +65,10 @@
               >
                 {{ tag }}
               </span>
-              <h4 class="mt-4 font-extrabold text-2xl">
+              <h3 class="mt-4 font-extrabold text-2xl">
                 <SvgIcon v-if="icon" :name="icon" class="inline-block text-grey w-6 h-6 mr-1" />
                 {{ $t(`download.wallets.${type}.title`) }}
-              </h4>
+              </h3>
               <p class="text-grey-dark mt-3">
                 {{ $t(`download.wallets.${type}.description`) }}
               </p>
@@ -82,6 +84,7 @@
                 <a
                   v-if="link"
                   :href="link"
+                  rel="noopener"
                   target="_blank"
                   class="button rounded-full bg-blue-mid text-white font-semibold px-6 mt-4 hover:bg-blue-dark md:text-xs"
                 >
@@ -91,6 +94,7 @@
                 <a
                   v-if="source"
                   :href="source"
+                  rel="noopener"
                   class="button rounded-full font-mono font-medium text-xs mt-4"
                   target="_blank"
                 >

@@ -15,6 +15,8 @@
         </section>
         <aside class="flex items-center">
           <img
+            width="322"
+            height="287"
             class="hidden md:block w-full"
             src="~/assets/images/hero2.svg"
             alt="Karbo"
@@ -25,6 +27,7 @@
         <DownloadDropdown />
         <a
           :href="githubLink"
+          rel="noopener"
           target="_blank"
           class="flex items-center font-mono font-medium hover:no-underline sm:mt-6 md:mt-0 md:ml-8 h-12"
         >
