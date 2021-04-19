@@ -7,6 +7,7 @@ export default {
     download: 'Download',
     usage: 'Usage',
     community: 'Community',
+    whitepaper: 'Whitepaper',
   },
 
   footer: {

@@ -7,14 +7,24 @@
         <img class="py-2 block md:hidden" src="~/assets/images/logo_small.svg" width="35" height="35" :alt="$t('karbo')">
       </a>
       <nav class="hidden md:flex flex-grow md:items-center">
-        <nuxt-link
-          v-for="({ hash, label }, i) in menu"
-          :key="i"
-          :to="localeRoute({ hash })"
-          class="text-xs lg:text-sm md:px-3 lg:px-4 xl:px-5"
-        >
-          {{ label }}
-        </nuxt-link>
+        <template v-for="({ hash, href, label }, i) in menu">
+          <nuxt-link
+            v-if="hash"
+            :key="i"
+            :to="localeRoute({ hash })"
+            class="text-xs lg:text-sm md:px-3 lg:px-4 xl:px-5"
+          >
+            {{ label }}
+          </nuxt-link>
+          <a
+            v-if="href"
+            :key="i"
+            :href="href"
+            class="text-xs lg:text-sm md:px-3 lg:px-4 xl:px-5"
+          >
+            {{ label }}
+          </a>
+        </template>
       </nav>
       <LanguageList class="hidden md:block" />
       <client-only>
@@ -28,15 +38,26 @@
         @close="mobileMenu = false"
       >
         <nav class="flex flex-col my-4">
-          <nuxt-link
-            v-for="({ hash, label }, i) in menu"
-            :key="i"
-            :to="localeRoute({ hash })"
-            class="font-sm py-2 text-lg"
-            @click.native="mobileMenu = false"
-          >
-            {{ label }}
-          </nuxt-link>
+          <template v-for="({ hash, href, label }, i) in menu">
+            <nuxt-link
+              v-if="hash"
+              :key="i"
+              :to="localeRoute({ hash })"
+              class="font-sm py-2 text-lg"
+              @click.native="mobileMenu = false"
+            >
+              {{ label }}
+            </nuxt-link>
+            <a
+              v-if="href"
+              :key="i"
+              :href="href"
+              class="font-sm py-2 text-lg"
+              @click="mobileMenu = false"
+            >
+              {{ label }}
+            </a>
+          </template>
         </nav>
         <LanguageList @selected="mobileMenu = false" />
       </MobileModal>
@@ -78,6 +99,10 @@ export default class ComponentName extends Vue {
       {
         label: this.$t('menu.community'),
         hash: '#social',
+      },
+      {
+        label: this.$t('menu.whitepaper'),
+        href: '/whitepaper.pdf',
       },
     ]
   }

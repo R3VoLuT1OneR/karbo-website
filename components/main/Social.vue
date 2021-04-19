@@ -3,7 +3,7 @@
     id="social"
     class="social flex flex-col justify-center xl:container pb-12 md:pb-32 md:pt-16 md:flex-row md:px-10 lg:px-12 xl:px-32"
   >
-    <aside class="py-12 lg:w-1/2 md:flex md:justify-center md:mr-12">
+    <aside class="py-12 lg:w-1/2 flex justify-center md:mr-12">
       <img width="333" height="150" src="~/assets/images/social.svg" :alt="$t('social.label')">
     </aside>
     <main class="lg:w-1/2">
