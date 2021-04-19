@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-blue-airy py-12">
-    <div class="md:container px-12 lg:px-16 xl:px-32">
+    <div class="xl:container px-12 lg:px-16 xl:px-32">
       <section class="grid gap-6 md:flex md:justify-between items-start">
         <a class="hidden md:block" href="/">
           <span class="sr-only">{{ $t('karbo') }}</span>
@@ -11,31 +11,6 @@
             {{ $t('footer.resources.label') }}
           </span>
           <template v-for="({ hash, href, label }, i) in resources">
-            <nuxt-link
-              v-if="hash"
-              :key="i"
-              :to="localeRoute({ hash })"
-              class="text-lg mt-3 md:text-sm"
-            >
-              {{ label }}
-            </nuxt-link>
-            <a
-              v-else-if="href"
-              :key="i"
-              :href="href"
-              rel="noopener"
-              target="_blank"
-              class="text-lg mt-3 md:text-sm"
-            >
-              {{ label }}
-            </a>
-          </template>
-        </nav>
-        <nav class="flex flex-col">
-          <span class="text-xl font-extrabold md:text-lg">
-            {{ $t('footer.legal.label') }}
-          </span>
-          <template v-for="({ hash, href, label }, i) in legal">
             <nuxt-link
               v-if="hash"
               :key="i"
@@ -128,19 +103,6 @@ export default class Footer extends Vue {
       {
         label: this.$t('footer.resources.list.explorer'),
         href: 'https://explorer.karbo.io',
-      },
-    ]
-  }
-
-  get legal() {
-    return [
-      {
-        label: this.$t('footer.legal.list.terms'),
-        hash: '#terms',
-      },
-      {
-        label: this.$t('footer.legal.list.privacy'),
-        hash: '#policy',
       },
     ]
   }

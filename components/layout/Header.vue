@@ -1,6 +1,6 @@
 <template>
   <header class="w-full bg-white z-10" :class="{ 'has-shadow': hasShadow }">
-    <div class="flex items-center w-full md:justify-between md:container md:py-6 xl:px-24 lg:px-12 md:px-6 bg-white">
+    <div class="flex items-center w-full md:justify-between xl:container md:py-6 xl:px-24 lg:px-12 md:px-6 bg-white">
       <a href="/" class="flex-grow ml-5 z-20 md:ml-0">
         <span class="sr-only">{{ $t('karbo') }}</span>
         <img class="hidden md:block lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" :alt="$t('karbo')">
@@ -17,7 +17,9 @@
         </nuxt-link>
       </nav>
       <LanguageList class="hidden md:block" />
-      <PriceList class="mr-4 md:ml-4 md:mr-0" />
+      <client-only>
+        <PriceList class="mr-4 md:ml-4 md:mr-0" />
+      </client-only>
       <div class="md:hidden cursor-pointer" @click="mobileMenu = true">
         <SvgIcon name="menu" class="w-6 h-6 mr-3 text-blue-mid" />
       </div>

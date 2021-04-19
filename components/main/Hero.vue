@@ -1,13 +1,13 @@
 <template>
   <section class="hero">
-    <main class="py-12 md:py-16 md:container md:pl-12 lg:pl-20 xl:pl-32 md:pr-8 lg:pr-16 xl:pr-40">
+    <main class="py-12 md:py-16 xl:container md:px-10 lg:px-12 xl:px-32 md:pr-8 lg:pr-16 xl:pr-40">
       <header class="flex justify-between">
         <section>
           <h2 class="text-5xl font-extrabold">
             <span class="text-blue-dark">{{ $t('hero.title.line1') }}</span><br>
             {{ $t('hero.title.line2') }}
           </h2>
-          <h3 class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4">
+          <h3 class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4 mb-8">
             {{ $t('hero.subtitle.pre') }}
             <span class="font-normal italic">{{ $t('hero.subtitle.blockchain') }}</span>
             {{ $t('hero.subtitle.suff') }}
@@ -18,12 +18,12 @@
             width="322"
             height="287"
             class="hidden md:block w-full"
-            src="~/assets/images/hero2.svg"
+            src="~/assets/images/main_illustration.svg"
             alt="Karbo"
           >
         </aside>
       </header>
-      <footer class="mt-6 lg:mt-0 xl:-mt-20 md:flex">
+      <footer class="mt-6 md:mt-0 xl:-mt-20 md:flex">
         <DownloadDropdown />
         <a
           :href="githubLink"

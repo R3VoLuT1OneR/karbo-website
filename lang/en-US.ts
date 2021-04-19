@@ -18,13 +18,6 @@ export default {
         explorer: 'Explorer',
       }
     },
-    legal: {
-      label: 'Legal',
-      list: {
-        terms: 'Terms and conditions',
-        privacy: 'Privacy Policy',
-      }
-    }
   },
 
   hero: {
@@ -41,10 +34,6 @@ export default {
 
     downloadButton: {
       title: 'Download wallet',
-      disclaimer: {
-        preLine: 'By downloading and installing the wallet, you agree to the ',
-        linkTitle: 'Terms',
-      },
       wallets: {
         all: 'All wallets and clients'
       },

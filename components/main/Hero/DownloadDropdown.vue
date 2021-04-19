@@ -4,7 +4,7 @@
     :class="{ open }"
     @mouseleave="open = false"
   >
-    <header>
+    <header class="pb-3">
       <nuxt-link
         :to="localeRoute({ hash: '#download'})"
         class="button rounded border-r bg-blue-dark text-white hover:no-underline font-semibold"
@@ -15,10 +15,6 @@
           <SvgIcon name="arrow-down" class="text-white w-3 h-3" />
         </span>
       </nuxt-link>
-      <p class="text-xs mt-2 max-w-256px">
-        <!-- TODO: Link to terms and conditions? -->
-        {{ $t('hero.downloadButton.disclaimer.preLine') }}<span class="font-semibold">{{ $t('hero.downloadButton.disclaimer.linkTitle') }}</span>
-      </p>
     </header>
     <main v-if="open" class="pt-2">
       <a
@@ -125,7 +121,7 @@ export default class DownloadDropdown extends Vue {
 
   > main {
     @apply hidden absolute rounded bg-white;
-    top: calc(100% - 2rem);
+    top: 100%;
     left: 0;
     right: 0;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.14);

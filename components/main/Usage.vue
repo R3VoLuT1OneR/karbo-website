@@ -1,6 +1,6 @@
 <template>
   <article id="usage" class="usage py-12">
-    <div class="md:container md:px-12 lg:px-16 xl:px-32">
+    <div class="xl:container md:px-10 lg:px-12 xl:px-32">
       <header>
         <span class="uppercase font-mono text-orange text-sm font-bold tracking-widest">
           {{ $t('usage.label') }}

@@ -1,5 +1,5 @@
 <template>
-  <article id="download" class="download md:flex items-start md:container py-12 md:pb-32 md:px-12 lg:px-16 xl:px-32">
+  <article id="download" class="download md:flex items-start xl:container py-12 md:pb-32 md:px-10 lg:px-12 xl:px-32">
     <aside class="hidden lg:flex justify-center w-5/12 pr-12 lg:pt-16 xl:w-6/12">
       <img
         width="230"
@@ -9,7 +9,7 @@
         class="w-full xl:w-2/3"
       >
     </aside>
-    <section class="lg:w-7/12 xl:w-6/12">
+    <section class="md:w-full lg:w-7/12 xl:w-6/12">
       <header>
         <span class="uppercase font-mono text-orange text-sm font-bold tracking-widest">
           {{ $t('download.label') }}
@@ -19,7 +19,7 @@
         </h2>
       </header>
       <main>
-        <ul ref="tabs" class="flex pt-6 pb-8 overflow-x-auto">
+        <ul ref="tabs" class="flex py-8 overflow-x-auto">
           <li
             v-for="({ icon, label }, tab) in tabs"
             :key="tab"
