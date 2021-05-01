@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{336:function(o){o.exports=JSON.parse('{"macos":{"href":"https://github.com/Karbovanets/Karbo-lite/releases/download/v.1.1.0/KarboLite-wallet-macOS-v.1.1.0.dmg","version":"v.1.1.0","os":"macos"},"windows":{"href":"https://github.com/Karbovanets/Karbo-lite/releases/download/v.1.1.0/KarboLite-wallet-win64-v.1.1.0.zip","version":"v.1.1.0","os":"windows"}}')}}]);
+//# sourceMappingURL=c9fdc63.js.map
