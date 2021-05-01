@@ -12,7 +12,7 @@ export default {
           return
         }
 
-        return window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+        return window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' })
       }
 
       return window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -61,9 +61,9 @@ export default {
     langDir: 'lang/',
     defaultLocale: 'en',
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.ts' },
-      { code: 'uk', iso: 'uk-UA', name: 'Українська', file: 'uk-UA.ts' },
-      { code: 'ru', iso: 'ru-Ru', name: 'Русский', file: 'ru-RU.ts' },
+      { code: 'en', iso: 'en-US', small: 'En', name: 'English', file: 'en-US.ts' },
+      { code: 'uk', iso: 'uk-UA', small: 'Ук', name: 'Українська', file: 'uk-UA.ts' },
+      { code: 'ru', iso: 'ru-Ru', small: 'Ру', name: 'Русский', file: 'ru-RU.ts' },
     ],
     detectBrowserLanguage: {
       useCookie: true,

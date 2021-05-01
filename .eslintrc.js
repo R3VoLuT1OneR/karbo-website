@@ -14,5 +14,6 @@ module.exports = {
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
     'space-before-function-paren': ['off'],
+    'vue/no-v-html': ['off'],
   },
 }

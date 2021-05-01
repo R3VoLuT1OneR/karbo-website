@@ -23,15 +23,17 @@ export default {
 
   hero: {
     title: {
-      line1: 'Anonymous',
+      line1: [
+        'Decentralized',
+        'Liberated',
+        'Free',
+        'Private',
+        'Untraceable',
+      ],
       line2: 'Exchange Medium',
     },
-    subtitle: {
-      pre: 'based on CryptoNote ',
-      blockchain: 'blockchain',
-      suff: ' tech.',
-    },
-    githubContribution: 'Contribute on Github',
+    subtitle: "based on CryptoNote <strong>blockchain</strong> tech.",
+    githubContribution: 'Contribute on GitHub',
 
     downloadButton: {
       title: 'Download wallet',

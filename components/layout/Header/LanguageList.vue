@@ -9,7 +9,7 @@
       @click="open = !open"
     >
       <span class="capitalize font-semibold">
-        {{ $accessor.tailwind.viewSize === 'sm' ? $i18n.localeProperties.name : $i18n.locale }}
+        {{ $accessor.tailwind.viewSize === 'sm' ? $i18n.localeProperties.name : $i18n.localeProperties.small }}
       </span>
       <SvgIcon name="arrow-down" class="arrow-down w-3 h-3 ml-1" />
     </header>

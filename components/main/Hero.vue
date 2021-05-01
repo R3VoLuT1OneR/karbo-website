@@ -4,13 +4,18 @@
       <header class="flex justify-between">
         <section>
           <h2 class="text-5xl font-extrabold">
-            <span class="text-blue-dark">{{ $t('hero.title.line1') }}</span><br>
-            {{ $t('hero.title.line2') }}
+            <client-only>
+              <vue-typer
+                :text="$t('hero.title.line1')"
+                initial-action="erasing"
+              />
+            </client-only><br>
+            <span>
+              {{ $t('hero.title.line2') }}
+            </span>
           </h2>
           <h3 class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4 mb-8">
-            {{ $t('hero.subtitle.pre') }}
-            <span class="font-normal italic">{{ $t('hero.subtitle.blockchain') }}</span>
-            {{ $t('hero.subtitle.suff') }}
+            <span v-html="$t('hero.subtitle')"></span>
           </h3>
         </section>
         <aside class="flex items-center">
@@ -41,11 +46,14 @@
 </template>
 
 <script lang="ts">
+import { AsyncComponent } from 'vue'
 import { Vue, Component } from 'nuxt-property-decorator'
 import DownloadDropdown from '~/components/main/Hero/DownloadDropdown.vue'
 
 @Component({
   components: {
+    // This component is not working in SSR mode, so we load it in browser only
+    VueTyper: (async () => process.browser ? (await import('vue-typer')).VueTyper : {}) as AsyncComponent,
     DownloadDropdown,
   },
 })
@@ -68,6 +76,19 @@ export default class Hero extends Vue {
         > h2 {
           font-size: 2.875rem;
           line-height: 3.625rem;
+          ::v-deep .vue-typer {
+            .custom {
+              &.char {
+                color: theme('colors.blue-dark') !important;
+              }
+              &.caret {
+                background-color: transparent;
+                &:empty:before {
+                  content: '_';
+                }
+              }
+            }
+          }
         }
         > h3 {
           font-size: 1.5rem;

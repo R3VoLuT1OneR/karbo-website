@@ -1,11 +1,11 @@
 <template>
   <header class="w-full bg-white z-10" :class="{ 'has-shadow': hasShadow }">
     <div class="flex items-center w-full md:justify-between xl:container md:py-6 xl:px-24 lg:px-12 md:px-6 bg-white">
-      <a href="/" class="flex-grow ml-5 z-20 md:ml-0">
+      <nuxt-link :to="localeRoute({ path: '/' })" class="flex-grow ml-5 z-20 md:ml-0">
         <span class="sr-only">{{ $t('karbo') }}</span>
         <img class="hidden md:block lg:mr-24 lg:-mt-1" src="~/assets/images/logo.svg" width="128" height="142" :alt="$t('karbo')">
         <img class="py-2 block md:hidden" src="~/assets/images/logo_small.svg" width="35" height="35" :alt="$t('karbo')">
-      </a>
+      </nuxt-link>
       <nav class="hidden md:flex flex-grow md:items-center">
         <template v-for="({ hash, href, label }, i) in menu">
           <nuxt-link
