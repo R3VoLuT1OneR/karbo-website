@@ -27,9 +27,7 @@
         </template>
       </nav>
       <LanguageList class="hidden md:block" />
-      <client-only>
-        <PriceList class="mr-4 md:ml-4 md:mr-0" />
-      </client-only>
+      <PriceList class="mr-4 md:ml-4 md:mr-0" />
       <div class="md:hidden cursor-pointer" @click="mobileMenu = true">
         <SvgIcon name="menu" class="w-6 h-6 mr-3 text-blue-mid" />
       </div>

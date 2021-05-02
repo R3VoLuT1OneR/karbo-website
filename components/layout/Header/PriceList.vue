@@ -117,19 +117,19 @@ export default class PriceList extends Vue {
     return Object.keys(configs)
   }
 
-  async fetch() {
-    this.quotes = await this.$axios.get(
-      'https://api.coinpaprika.com/v1/tickers/krb-karbo', {
-        params: {
-          quotes: Object.keys(configs).join(','),
-        },
-      })
-      .then(({ data: { quotes } }) => {
-        this.loaded = true
-        return quotes
-      })
+  async created() {
+    if (process.browser) {
+      this.quotes = await this.$axios.get(
+        'https://api.coinpaprika.com/v1/tickers/krb-karbo', {
+          params: {
+            quotes: Object.keys(configs).join(','),
+          },
+        })
+        .then(({ data: { quotes } }) => {
+          this.loaded = true
+          return quotes
+        })
 
-    if (typeof window !== 'undefined') {
       const savedCurrency = window.localStorage.getItem(LS_KEY_SELECTED_CURRENCY)
       if (savedCurrency && configs[savedCurrency]) {
         this.selected = savedCurrency
