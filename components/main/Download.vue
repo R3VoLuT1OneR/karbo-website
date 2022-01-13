@@ -177,12 +177,12 @@ export default class Download extends Vue {
             download: this.karbo.classic.details!.windows.href,
             source: this.karbo.classic.source,
           },
-          {
-            tag: 'alternative',
-            type: WalletType.Spring,
-            download: this.karbo.spring.details!.windows.href,
-            source: this.karbo.spring.source,
-          },
+          // {
+          //   tag: 'alternative',
+          //   type: WalletType.Spring,
+          //   download: this.karbo.spring.details!.windows.href,
+          //   source: this.karbo.spring.source,
+          // },
           {
             tag: 'alternative',
             type: WalletType.Lite,
@@ -207,12 +207,12 @@ export default class Download extends Vue {
             download: this.karbo.classic.details!.macos.href,
             source: this.karbo.classic.source,
           },
-          {
-            tag: 'alternative',
-            type: WalletType.Spring,
-            download: this.karbo.spring.details!.macos.href,
-            source: this.karbo.spring.source,
-          },
+          // {
+          //   tag: 'alternative',
+          //   type: WalletType.Spring,
+          //   download: this.karbo.spring.details!.macos.href,
+          //   source: this.karbo.spring.source,
+          // },
           {
             tag: 'alternative',
             type: WalletType.Lite,
@@ -237,12 +237,12 @@ export default class Download extends Vue {
             download: this.karbo.classic.details!.macos.href,
             source: this.karbo.classic.source,
           },
-          {
-            tag: 'alternative',
-            type: WalletType.Spring,
-            download: this.karbo.spring.details!.macos.href,
-            source: this.karbo.spring.source,
-          },
+          // {
+          //   tag: 'alternative',
+          //   type: WalletType.Spring,
+          //   download: this.karbo.spring.details!.macos.href,
+          //   source: this.karbo.spring.source,
+          // },
           {
             tag: 'alternative',
             type: WalletType.Lite,
