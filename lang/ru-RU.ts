@@ -3,10 +3,10 @@ export default {
   karbo: 'Karbo',
 
   menu: {
-    about: 'About',
-    download: 'Download',
-    usage: 'Usage',
-    community: 'Community',
+    about: 'О Карбо(?)',
+    download: 'Загрузить',
+    usage: 'Использование',
+    community: 'Сообщество',
     whitepaper: 'Whitepaper',
   },
 
@@ -15,8 +15,8 @@ export default {
       label: 'Resources',
       list: {
         usage: 'Usage',
-        download: 'Download',
-        explorer: 'Explorer',
+        download: 'Загрузить',
+        explorer: 'Обозреватель',
       }
     },
   },
@@ -24,69 +24,69 @@ export default {
   hero: {
     title: {
       line1: [
-        'Decentralized',
+        'Децентрализованное',
         'Liberated',
-        'Free',
-        'Private',
-        'Untraceable',
+        'Свободное',
+        'Приватное',
+        'Неотслеживаемое',
       ],
-      line2: 'Exchange Medium',
+      line2: 'обменное средство',
     },
-    subtitle: "based on CryptoNote <strong>blockchain</strong> tech.",
+    subtitle: "основано на <strong>блокчейн</strong> технологии CryptoNote.",
     githubContribution: 'Contribute on GitHub',
 
     downloadButton: {
-      title: 'Download wallet',
+      title: 'Загрузить кошелек',
       wallets: {
-        all: 'All wallets and clients'
+        all: 'Все кошельки и клиенты'
       },
     }
   },
 
   wallets: {
-    windows: 'Wallet for Windows',
-    linux: 'Wallet for Linux',
-    macos: 'Wallet for Mac OS X',
-    android: 'Wallet for Android',
-    web: 'Web Wallet',
-    paper: 'Paper Wallet',
+    windows: 'Кошелек для Windows',
+    linux: 'Кошелек для Linux',
+    macos: 'Кошелек для Mac OS X',
+    android: 'Кошелек для Android',
+    web: 'Web Кошелек',
+    paper: 'Бумажный Кошелек',
   },
 
   about: {
-    label: 'About',
-    title: 'Main Title About Karbo',
-    description: 'Karbo does not have centralized management or issuer and ensures privacy and anonymity of transactions without intermediaries and regulators.',
+    label: 'О Карбо(?)',
+    title: 'Преимущества Карбо(?)',
+    description: 'Karbo не имеет централизованного управления или эмитента, и обеспечивает конфиденциальность и анонимность транзакций без посредников и регуляторов.',
 
     privacy: {
       label: 'Privacy Matters',
-      content: 'The anonymity of payments without the ability to track them, resistance to the blockchain analysis is provided by technology CryptoNote.',
+      content: 'Анонимность платежей, невозможность их отслеживания и устойчивость к блокчейн анализу обеспечивается технологией Cryptonote.',
     },
     full_control: {
-      label: 'Liberty is Your Full Control',
-      content: 'Only you control your money. No one can confiscate them, seize them, deny your access, or restrict your freedom to dispose of your money.',
+      label: 'Всё под вашим контролем(?)',
+      content: 'Только вы контроллируете свои деньги(средства) в Karbo. Никто не может их изъять, ограничить к ним доступ, или лишить возможности свободно распоряжаться своими собственными деньгами',
     },
     no_intermediates: {
-      label: 'No Intermediaries and Regulators',
-      content: 'Transactions take place through a decentralized system. Emissions system operates according to a predefined mathematical algorithm without central control bodies.',
+      label: 'Без посредников и регуляторов',
+      content: 'Транзакции управляются децентрализованной системой. Эмиссия происходит по заранее заданным математическим алгоритмам без внешнего вмешательства и человеческого фактора.',
     },
     openness: {
-      label: 'Openness and Accessibility',
-      content: 'Karbo is an open and decentralized network. Everyone is welcomed to contribute, participate in mining, development and governance.',
+      label: 'Открытость и доступность',
+      content: 'Karbo это открытая и децентрализованная сеть, в которой каждый может принять участие в майнинге, разработке и управлении.',
     },
     security: {
-      label: 'Security and Reliability',
-      content: 'The network, transactions, your account, and your coins are cryptographically protected (encrypted).',
+      label: 'Безопасность и надежность',
+      content: 'Сеть, транзакции, ваша учетная запись и ваши монеты криптографически защищены (зашифрованы).',
     },
     coins: {
-      label: 'All Coins are Equal',
-      content: 'Fungibility means all coins have equal value and are interchangeable because it is impossible to trace their history.',
+      label: 'Все монеты равны',
+      content: 'Взаимозаменяемость (Fungibility) означает, что все монеты равны, имеют одинаковую стоимость и взаимозаменяемы, поскольку их историю невозможно проследить.',
     },
   },
 
   download: {
-    karboWallet: 'Karbo Wallet',
-    label: 'Download',
-    title: 'Choose Your Wallet',
+    karboWallet: 'Кошелек Карбо',
+    label: 'Загрузка',
+    title: 'Выберите Кошелек',
 
     tabs: {
       windows: 'Windows',
@@ -99,41 +99,41 @@ export default {
 
     wallets: {
       cli: {
-        title: 'Command Line Suite',
-        description: 'Command line tools for services. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        title: 'Коммандная Строка',
+        description: 'Набор консольных приложений для работы с Karbo.',
       },
       classic: {
         title: 'QT Wallet Classic',
-        description: 'Native Karbo wallet. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        description: 'Основной и рекомендуемый кошелек Karbo для ПК.',
       },
       spring: {
         title: 'QT Spring Wallet',
-        description: 'Alternative Karbo wallet. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        description: 'Альтернативный кошелек Karbo.',
       },
       lite: {
         title: 'Lite Wallet',
-        description: 'Doesn’t store the blockchain on disc. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        description: 'Легкий кошелек. Не загружает и не хранит блокчейн на диске.',
       },
       android: {
-        title: 'Android Wallet',
-        description: 'Android . Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        title: 'Android Кошелек',
+        description: 'Мобильный кошелек для Android.',
       },
       web: {
         title: 'Web Wallet',
-        description: 'Web Wallet . Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        description: 'Web Кошелек, работающий в браузере. Можно использовать на Android и iOS.',
       },
     }
   },
 
   usage: {
     label: 'Usage',
-    title: 'Partners and Ecosystem',
-    description: 'Here you can find places where to buy, exchange or spend Karbo.',
+    title: 'Партнеры(?)',
+    description: 'Где можно купить, обменять или потратить Карбо.',
   },
 
   social: {
     label: 'SOCIAL',
-    title: 'Join the Karbo Community',
-    description: 'Join discussions to be aware of all the latest news.',
+    title: 'Присоединиться к сообществу Карбо',
+    description: 'Присоединиться к обсуждению чтобы быть в курсе последних новостей.',
   }
 }
