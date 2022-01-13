@@ -15,7 +15,7 @@
             </span>
           </h2>
           <h3 class="text-2xl text-grey-mid font-light font-mono leading-9 mt-4 mb-8">
-            <span v-html="$t('hero.subtitle')"></span>
+            <span v-html="$t('hero.subtitle')" />
           </h3>
         </section>
         <aside class="flex items-center">
