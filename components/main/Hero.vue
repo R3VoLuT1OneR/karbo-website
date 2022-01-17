@@ -46,14 +46,13 @@
 </template>
 
 <script lang="ts">
-import { AsyncComponent } from 'vue'
 import { Vue, Component } from 'nuxt-property-decorator'
 import DownloadDropdown from '~/components/main/Hero/DownloadDropdown.vue'
 
 @Component({
   components: {
     // This component is not working in SSR mode, so we load it in browser only
-    VueTyper: (async () => process.browser ? (await import('vue-typer')).VueTyper : {}) as AsyncComponent,
+    VueTyper: async () => process.browser ? (await import('vue-typer')).VueTyper : {},
     DownloadDropdown,
   },
 })
