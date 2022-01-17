@@ -14,9 +14,9 @@ export default {
     resources: {
       label: 'Resources',
       list: {
-        usage: 'Usage',
-        download: 'Download',
-        explorer: 'Explorer',
+        usage: 'Використання',
+        download: 'Завантажити',
+        explorer: 'Оглядач',
       }
     },
   },
@@ -53,40 +53,40 @@ export default {
   },
 
   about: {
-    label: 'About',
-    title: 'Main Title About Karbo',
-    description: 'Karbo does not have centralized management or issuer and ensures privacy and anonymity of transactions without intermediaries and regulators.',
+    label: 'Про Карбо',
+    title: 'Переваги Карбо',
+    description: 'Карбо не має централізованого управління або емітента, і забезпечує конфіденційність та анонімність транзакцій без посередників та регуляторів. ',
 
     privacy: {
-      label: 'Privacy Matters',
-      content: 'The anonymity of payments without the ability to track them, resistance to the blockchain analysis is provided by technology CryptoNote.',
+      label: 'Приватність важлива',
+      content: 'Анонімність платежів, неможливість їх відстеження та стійкість до блокчейн аналізу забезпечується технологією Cryptonote.',
     },
     full_control: {
-      label: 'Liberty is Your Full Control',
-      content: 'Only you control your money. No one can confiscate them, seize them, deny your access, or restrict your freedom to dispose of your money.',
+      label: 'Все під вашим контролем',
+      content: 'Тільки ви контролюєте свої гроші у Карбо. Ніхто не може їх вилучити, обмежити доступ до них, або позбавити вас можливості вільно ними розпоряджатися. ',
     },
     no_intermediates: {
-      label: 'No Intermediaries and Regulators',
-      content: 'Transactions take place through a decentralized system. Emissions system operates according to a predefined mathematical algorithm without central control bodies.',
+      label: 'Без посередників та регуляторів',
+      content: 'Транзакції керуються децентралізованою системою. Емісія відбувається за заздалегідь заданими математичними алгоритмами без зовнішнього втручання та людського фактора.',
     },
     openness: {
-      label: 'Openness and Accessibility',
-      content: 'Karbo is an open and decentralized network. Everyone is welcomed to contribute, participate in mining, development and governance.',
+      label: 'Відкритість та доступність ',
+      content: 'Карбо це відкрита та децентралізована мережа, в якій кожен може взяти участь у майнінгу, розробці та управлінні.',
     },
     security: {
-      label: 'Security and Reliability',
-      content: 'The network, transactions, your account, and your coins are cryptographically protected (encrypted).',
+      label: 'Безпека та надійність',
+      content: 'Мережа, транзакції, ваш обліковий запис та ваші монети криптографічно захищені (зашифровані).',
     },
     coins: {
-      label: 'All Coins are Equal',
-      content: 'Fungibility means all coins have equal value and are interchangeable because it is impossible to trace their history.',
+      label: 'Усі монети рівні',
+      content: 'Взаємозамінність (Fungibility) означає, що всі монети рівні, мають однакову вартість та взаємозамінні, оскільки їхню історію неможливо простежити.',
     },
   },
 
   download: {
-    karboWallet: 'Karbo Wallet',
-    label: 'Download',
-    title: 'Choose Your Wallet',
+    karboWallet: 'Гаманець Карбо',
+    label: 'Завантажити',
+    title: 'Оберіть Гаманець',
 
     tabs: {
       windows: 'Windows',
@@ -99,41 +99,41 @@ export default {
 
     wallets: {
       cli: {
-        title: 'Command Line Suite',
-        description: 'Command line tools for services. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        title: 'Командний рядок,
+        description: 'Набір консольних програм для роботи з Карбо.',
       },
       classic: {
         title: 'QT Wallet Classic',
-        description: 'Native Karbo wallet. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        description: 'Основний та рекомендований гаманець Карбо для ПК.',
       },
       spring: {
         title: 'QT Spring Wallet',
-        description: 'Alternative Karbo wallet. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        description: 'Альтернативний гаманець Карбо.',
       },
       lite: {
         title: 'Lite Wallet',
-        description: 'Doesn’t store the blockchain on disc. Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        description: 'Легкий гаманець. Не завантажує та не зберігає блокчейн на диску.',
       },
       android: {
-        title: 'Android Wallet',
-        description: 'Android . Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        title: 'Android Гаманець',
+        description: 'Мобільний гаманець для Android.',
       },
       web: {
-        title: 'Web Wallet',
-        description: 'Web Wallet . Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        title: 'Web Гаманець',
+        description: 'Web Гаманець, що працює у браузері. Можна використовувати на Android та iOS.',
       },
     }
   },
 
   usage: {
-    label: 'Usage',
-    title: 'Partners and Ecosystem',
-    description: 'Here you can find places where to buy, exchange or spend Karbo.',
+    label: 'Використання',
+    title: 'Партнери',
+    description: 'Де можна купити, обміняти чи витратити Карбо.',
   },
 
   social: {
-    label: 'SOCIAL',
-    title: 'Join the Karbo Community',
-    description: 'Join discussions to be aware of all the latest news.',
+    label: 'Спільнота',
+    title: 'Приєднатися до спільноти Карбо',
+    description: 'Приєднатися до обговорення, щоб бути в курсі усіх останніх новин.',
   }
 }
