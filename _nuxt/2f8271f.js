@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{367:function(o){o.exports=JSON.parse('{"macos":{"href":"https://github.com/Karbovanets/karbowanecwallet/releases/download/v.2.4.3/Karbo-wallet-macOS-v.2.4.3.dmg","version":"v.2.4.3","os":"macos"},"windows":{"href":"https://github.com/Karbovanets/karbowanecwallet/releases/download/v.2.4.3/Karbo-wallet-win64-v.2.4.3-install.zip","version":"v.2.4.3","os":"windows"}}')}}]);
-//# sourceMappingURL=2f8271f.js.map
