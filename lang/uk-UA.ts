@@ -99,7 +99,7 @@ export default {
 
     wallets: {
       cli: {
-        title: 'Командний рядок,
+        title: 'Командний рядок',
         description: 'Набір консольних програм для роботи з Карбо.',
       },
       classic: {

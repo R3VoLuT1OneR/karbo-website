@@ -49,8 +49,8 @@ const loadReleaseDetails = async (version: WalletVersion, type: WalletType) => {
               [os]: {
                 href: asset.browser_download_url,
                 version,
-                os
-              }
+                os,
+              },
             }
           }
         }
