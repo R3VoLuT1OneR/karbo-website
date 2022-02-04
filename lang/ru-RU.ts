@@ -12,7 +12,7 @@ export default {
 
   footer: {
     resources: {
-      label: 'Resources',
+      label: 'Ресурсы',
       list: {
         usage: 'Использование',
         download: 'Загрузить',
