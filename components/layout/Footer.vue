@@ -102,7 +102,7 @@ export default class Footer extends Vue {
       },
       {
         label: this.$t('footer.resources.list.explorer'),
-        href: 'https://explorer.karbo.io',
+        href: 'https://explorer.karbo.network',
       },
     ]
   }
