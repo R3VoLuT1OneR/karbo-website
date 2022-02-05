@@ -129,6 +129,27 @@ export default {
     label: 'Usage',
     title: 'Partners and Ecosystem',
     description: 'Here you can find places where to buy, exchange or spend Karbo.',
+
+    exchanges: {
+      btctrade: {
+        subtitle: 'Duis aute irure in reprenderit invas id voluptate velit esse cillum adipiscing.',
+      },
+      richhamster: {
+        subtitle: 'Duis aute irure in reprenderit invas id voluptate velit esse cillum adipiscing.',
+      },
+      tradeogre: {
+        subtitle: 'Duis aute irure in reprenderit invas id voluptate velit esse cillum adipiscing.',
+      },
+      occe: {
+        subtitle: 'Duis aute irure in reprenderit invas id voluptate velit esse cillum adipiscing.',
+      },
+      karbo24: {
+        subtitle: 'Duis aute irure in reprenderit invas id voluptate velit esse cillum adipiscing.',
+      },
+      crex24: {
+        subtitle: 'Duis aute irure in reprenderit invas id voluptate velit esse cillum adipiscing.',
+      },
+    }
   },
 
   social: {
