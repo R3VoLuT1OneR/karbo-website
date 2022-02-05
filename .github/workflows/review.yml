@@ -1,15 +1,15 @@
-name: deploy
+name: ci
 
 on:
   push:
     branches:
-      - main
+      - '**'
   pull_request:
     branches:
       - main
 
 jobs:
-  deploy:
+  Review:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎
@@ -25,13 +25,12 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: npm install
 
-      - name: Generate
-        env:
-          NUXT_ROUTER_BASE: /karbo-website
-        run: npm run generate
+      - name: Run lint test on project ☑
+        run: npm run lint
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy static app in branch to gh-pages
+        uses: Sauloxd/review-apps@v1.3.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          build-cmd: 'npm run generate'
+          branch: 'gh-pages'
+          slug: 'review'

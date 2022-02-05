@@ -4,7 +4,7 @@ export default {
   // mode: "spa",
 
   router: {
-    base: process.env.NUXT_ROUTER_BASE || '/',
+    base: process.env.PUBLIC_URL || '/',
     scrollBehavior(to) {
       if (to.hash) {
         const el = document.querySelector(to.hash)
